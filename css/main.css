@@ -1,0 +1,249 @@
+a:link {text-decoration: none;color:#000000;}
+a:visited {text-decoration: none;color:#000000;}
+a:active {text-decoration: none;color:#000000;}
+
+
+hr{
+	height: 1px;
+    margin: 0 0 0 0px;
+	border-top: 1px solid #ddd;
+}
+.fontSmall{
+	font-size: small;
+}
+.smallFont{
+	font-size: x-small;
+	display: block;
+    margin: 0;
+    padding: 0;
+	width: 40px;
+}
+
+
+.fa-cog {
+  color: red;
+}
+
+.columnCenter{
+		text-align: center;
+}
+.columnRight{
+		text-align: right !important;
+}
+.columnLeft{
+		text-align: left !important;
+}
+.link{
+	cursor: pointer;
+}
+
+
+.detail{
+	font-size: small;
+}
+
+.label{
+	color: #000;
+	font-weight: bold;
+}
+.value{
+	color: #000;
+	font-size: x-small;
+}
+
+.nopadding {
+   padding: 0px !important;
+   margin: 0px !important;
+}
+
+/********************************************** add currencie ***********************************************/
+
+.favorite{
+	background-color: #B1D1EE !important;
+}
+.favorite:hover{
+	
+}
+
+/********************************************** currencies ***********************************************/
+
+.currencieDetail{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 4px;
+	padding: 2px;
+	width: 300px; 
+}
+
+.btnPannelCurrencie{
+	width:	20px;
+	height: 20px;
+	margin: 3px 0px 0px 0px;
+	padding: 0px;
+}
+
+.btnActionCurrencie{
+	width:	25px;
+	height: 26px;
+	margin: 3px 0px 0px 0px;
+	padding: 2px;
+}
+
+
+
+/********************************************** navBar ***********************************************/
+
+#navBarBtn.navbar-brand{
+	margin: 0px;
+	padding: 0px;
+}
+#navBarBtn ul{
+	padding-top: 2px;
+}
+#navBarBtn ul li a{
+	margin-top: 0px;
+}
+
+/********************************************** sponsoredCoin ***********************************************/
+
+.square{
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+#sponsoredCoin{
+	width: 100%;
+	height: 100px;
+	padding: 5px 5px;
+	border: 1px solid black;
+}
+#sponsoredCoin a{
+	padding: 0px 5px 0px 5px;
+}	
+#sponsoredCoin img{
+	padding: 2px 2px 2px 2px;
+}
+#sponsoredCoin .sponsored{
+	font-size: xx-small;
+}
+
+/********************************************** pub ***********************************************/
+
+#zonePub1{
+	height: 110px;
+	padding: 5px 5px;
+}
+
+#coinTrafficTop{
+	margin: 0 auto;
+	width: 728px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+#zonePub2{
+	width: 336px;
+	height: 280px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+
+
+/********************************************** chart/alerte ***********************************************/
+
+#charts{
+	padding: 5px 5px 5px 5px;
+}
+.chart{
+	padding: 8px;
+}
+
+
+
+/********************************************** bootstrap ***********************************************/
+
+
+.nav-pills  {
+  margin-left: 5px;  
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+
+/*medium+ screen sizes*/
+@media (min-width:451px) {
+	.desktop-only {
+        display:block !important;
+    }
+	.hidden-after-451 { 
+		display: none; 
+	}
+}
+ 
+/*small screen sizes*/
+@media (max-width: 450px) {
+    .mobile-only {
+        display:block !important;
+    }
+    .desktop-only {
+        display:none !important;
+    }
+	.xsCenter{
+		text-align: center;
+	}
+	.navbar-brand{
+		float: none;
+		margin: 0px;
+		padding: 0px;
+		height: 25px;
+	}
+	#navBarBtn.navbar-brand{
+		height: 50px;
+	}
+	.divCenter{
+		margin: 0 auto;
+		width: 300px; 
+	}
+	.hidden-before-450 { 
+		display: none; 
+	}
+	#page-wrapper {
+	padding-bottom:70px; /* Height of the footer element */
+	}
+	#footer {
+		background-color: #f8f8f8;
+		width:100%;
+		height:60px;
+		position:fixed;
+		bottom:0;
+		left:0;
+	}
+
+}
+
+/********************************************** angular ***********************************************/
+
+.md-button {
+  border: 0px;
+  background-color: transparent;
+}
+.md-button[disabled] {
+  color: #5cb85c;
+  background-color: transparent;
+}
+
+

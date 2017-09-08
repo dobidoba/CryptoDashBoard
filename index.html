@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>My Crypto-Currency Dashboard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./css/sb-admin-2.css" rel="stylesheet">
+	<link href="./css/main.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body ng-app="MyCryptoApp" ng-controller="MainCtrl">
+
+    <div id="wrapper">
+
+		<div ng-include="'./pages/navigation.html'"></div>
+
+        <div id="page-wrapper" class="tab-content">
+            
+			<!--
+			<div id="zonePub1" class="visible-sm visible-md visible-lg">
+				<div id="coinTrafficTop">
+					coinTrafficZ
+				</div>
+			</div>
+			-->
+			
+			
+			<div id="generalTab" class="tab-pane fade in active">
+					<div ng-include="'./pages/listCurrencies.html'"></div>
+			</div>
+		
+			<div id="addTab" class="tab-pane fade">
+				<div ng-include="'./pages/addCurrencies.html'"></div>
+			</div>
+			
+			<div id="chartsTab" class="tab-pane fade">
+				<div ng-include="'./pages/charts.html'"></div>
+			</div>
+	
+			<div id="helpTab" class="tab-pane fade">
+				<div ng-include="'./pages/help.html'"></div>
+			</div>
+	
+			<div id="copyrightTab" class="tab-pane fade">
+				<div ng-include="'./pages/copyright.html'"></div>
+			</div>
+			
+			<!--
+			<div id="zonePub2">
+				<a href="#" onclick="document.getElementById('zonePub2').style.display = 'none';">Close</a>
+				coinTraffic
+			</div>
+			-->
+			
+        </div>
+        <!-- /#page-wrapper -->
+		
+		<div id="footer" class="footer hidden-after-451">
+
+			<div id="navBarBtn" class="navbar-brand xsCenter">
+				<ul class="nav btn nav-pills">
+					<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
+					<li><a data-toggle="tab" href="#addTab" class="btn btn-default navbar-btn"><i class="fa fa-plus-square-o fa-fw"></i></a></li>
+					<li><a data-toggle="tab" href="#chartsTab" class="btn btn-default navbar-btn"> <i class="fa fa-bar-chart fa-fw"></i></a></li>
+					<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
+					<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
+				</ul>
+			</div>
+		
+		</div>
+		
+    </div>
+    <!-- /#wrapper -->
+	
+
+	
+	
+    <!-- jQuery -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	
+	<!-- chart -->
+	<script src="./js/fusioncharts/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="./js/fusioncharts/js/themes/fusioncharts.theme.zune.js"></script>
+	
+	<!-- Angular and adds-->
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+	<script src="./js/fusioncharts/js/angular-fusioncharts.min.js"></script>
+	<script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+	
+	<!-- MyCryptoApp --> 
+	<script src="./js/MyCryptoApp.js"></script>
+	<script src="./js/MyCryptoFilters.js"></script>
+	<script src="./js/controlleurs/MainCtrl.js"></script>
+	<script src="./js/controlleurs/ListCurrenciesCtrl.js"></script>
+	<script src="./js/controlleurs/AddCurrenciesCtrl.js"></script>
+	<script src="./js/controlleurs/FusionChartsCtrl.js"></script>
+	<script src="./js/controlleurs/StorageService.js"></script>
+	<script src="./js/controlleurs/RequestService.js"></script>
+	<script src="./js/controlleurs/CurrenciesService.js"></script>
+	
+	
+</body>
+
+</html>

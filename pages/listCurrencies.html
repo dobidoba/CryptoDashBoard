@@ -1,0 +1,152 @@
+<div ng-controller="ListCurrenciesCtrl">
+	<div ng-include="'./pages/4blocs.html'"></div>
+	
+	<div class="divCenter">
+		<div ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
+			
+			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+			
+					<div class="col-xs-4 nopadding" >
+						 <ul class="columnCenter nav nav-pills" >
+							<li>
+								<a ng-click="showDetail(currencie.symbol)" class="btn btn-default navbar-btn">
+									<img ng-src="{{ currencie.png }}"  title="{{ currencie.name }}"> 
+									<span class="smallFont">
+										{{ currencie.symbol }}<br/>
+										{{ currencie.rank}}
+									</span>	
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="col-xs-7 nopadding" >
+							
+							<div>
+								<span class="btn btnPannelCurrencie panel-blue"><i class="fa fa-line-chart"></i></span>
+								{{ currencie.price_btc | limitTo:12 }}
+							</div>						
+
+							<div>
+								<span class="btn btnPannelCurrencie panel-yellow"><i class="fa fa-btc"></i></span>
+								{{ currencie.valueBtc | setDecimal:3 }} <i class="fa fa-btc"></i>
+							</div>
+							
+							<div>	
+								<span class="btn btnPannelCurrencie panel-red"><i class="fa fa-usd"></i></span>
+								{{ currencie.valueDollars | setDecimal:3 }} <i class="fa fa-usd"></i>
+							</div>
+							
+							<div style="white-space: nowrap;">
+									<span class="btn btnPannelCurrencie panel-green"><i class="fa fa-cubes"></i></span>
+									<!--<input class="columnRight" style="width: 85px; height: 20px;" type="text" ng-model="currencie.balance" ng-change="updateMyCryptoBalance(currencie,'{{currencie.balance}}')">-->
+									{{ currencie.balance }} {{ currencie.symbol }}
+							</div>
+						
+					</div>
+					
+					<div class="col-xs-1 nopadding" >
+							
+							<div>
+								<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+													target="_blank" 
+													title="coinmarketcap : {{ currencie.symbol | uppercase}}"
+													class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-external-link fw"></i>
+								</a>
+							</div>						
+
+							<div style="white-space: nowrap;">
+								<button 
+									type="button" 
+									data-toggle="modal" 
+									data-target="#myModal" 
+									ng-click="setSelectedCurrencie(currencie)"
+									class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-plus-square-o"></i>
+								</button>
+							</div>
+
+							<div>
+								<button 
+									type="button" 
+									data-toggle="modal" 
+									data-target="#myModalDelete" 
+									ng-click="setSelectedCurrencie(currencie)"
+									class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-trash"></i>
+								</button>
+							</div>
+							
+					</div>
+					
+					<div class="detail" ng-show="activeDetail==currencie.symbol || windowWidth >= 450">
+									
+						<div class="col-xs-12"><hr></div>
+										
+						<div class="col-xs-5 label columnLeft">MarketCap :</div>
+						<div class="col-xs-7 value">{{ currencie.market_cap_usd | number:3 }} <i class="fa fa-usd"></i></div>
+						<!--
+						<div class="col-xs-5 label columnLeft">Volume 24h :</div>
+						<div class="col-xs-7 value">{{ currencie.24h_volume_usd | number:3 }} <i class="fa fa-usd"></i></div>
+						-->
+						<div class="col-xs-5 label columnLeft">price :</div>
+						<div class="col-xs-7 value">{{ currencie.price_usd | limitTo:7 }} <i class="fa fa-usd"></i></div>
+						
+						<div class="col-xs-5 label columnLeft">AvailableSupply :</div>
+						<div class="col-xs-7 value">{{ currencie.available_supply | number:3 }} {{ currencie.symbol }}</div>
+						
+						<div class="col-xs-5 label columnLeft">Change 24h :</div>
+						<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }">{{ currencie.percent_change_24h }} %</div>
+						
+						<div class="col-xs-5 label columnLeft">Change 7d :</div>
+						<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_7d < 0 ? 'red' : 'green' }">{{ currencie.percent_change_7d }} %</div>
+					</div>
+			</div>	
+			
+		</div>
+		
+		<div>
+		&nbsp;<!-- necessaire -->
+		</div>
+	
+		  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">{{selectedCurrencie.symbol}} balance</h4>
+				</div>
+				<div class="modal-body">
+				  <input type="number" class="columnRight" style="width: 150px; height: 20px;" ng-model="selectedCurrencie.balance" ng-change="updateMyCryptoBalance(selectedCurrencie,'{{selectedCurrencie.balance}}')">
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <!-- Modal Delete -->
+		  <div class="modal fade" id="myModalDelete" role="dialog">
+			<div class="modal-dialog modal-sm">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Delete {{selectedCurrencie.symbol}} ?</h4>
+				</div>
+				
+				<div class="modal-footer">
+				  <button 	type="button" 
+							class="btn btn-default" 
+							data-dismiss="modal"
+							ng-click="removeSelectedCurrencie()">
+							Ok
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+</div>	

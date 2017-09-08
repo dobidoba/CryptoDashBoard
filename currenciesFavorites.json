@@ -1,0 +1,114 @@
+[
+	{
+        "symbol": "BTC", 
+        "balance": "0",
+		"favorite": "true"
+    },
+    {
+        "symbol": "ESP", 
+        "balance": "5000000",
+		"favorite": "true"
+    }, 
+    {
+        "symbol": "STRAT", 
+        "balance": "605",
+		"favorite": "true"
+    },
+	{
+        "symbol": "SHIFT", 
+        "balance": "630",
+		"favorite": "true"
+    },
+	{
+        "symbol": "VEC2", 
+        "balance": "7007",
+		"favorite": "true"
+    },
+	{
+        "symbol": "TRST", 
+        "balance": "1671",
+		"favorite": "true"
+    },
+	{
+        "symbol": "WINGS", 
+        "balance": "89",
+		"favorite": "true"
+    },
+	{
+        "symbol": "HMQ", 
+        "balance": "1820",
+		"favorite": "true"
+    },
+	{
+        "symbol": "ANT", 
+        "balance": "51",
+		"favorite": "true"
+    },
+	{
+        "symbol": "CVC", 
+        "balance": "0",
+		"favorite": "true"
+    }
+	,
+	{
+        "symbol": "ARK", 
+        "balance": "0",
+		"favorite": "true"
+    }
+	,
+	{
+        "symbol": "XEL", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "PART", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "TIME", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "QTUM", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "BNT", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "MIOTA", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "XSPEC", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "ADC", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "DCT", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "BRO", 
+        "balance": "0",
+		"favorite": "true"
+    },
+	{
+        "symbol": "XLR", 
+        "balance": "0",
+		"favorite": "true"
+    }
+]

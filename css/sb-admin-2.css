@@ -1,0 +1,137 @@
+/*!
+ * Start Bootstrap - SB Admin 2 Bootstrap Admin Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    background-color: #f8f8f8;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    padding: 5px 10px 5px 10px;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+.navbar-top-links {
+    margin-right: 0;
+}
+
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 3px 20px;
+    min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+
+@media(min-width:768px) {
+    
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-blue {
+    border-color: #575C81;
+    color: #fff;
+    background-color: #575C81;
+}
+
+.panel-green {
+    border-color: #578B67;
+    color: #fff;
+    background-color: #578B67;
+}
+
+.panel-red {
+    border-color: #BB7F76;
+    color: #fff;
+    background-color: #BB7F76;
+}
+
+
+.panel-yellow {
+    border-color: #BBA876;
+    color: #fff;
+    background-color: #BBA876;
+}
+
+.panel-grey {
+    border-color: 	#D3D3D3;
+    color: #fff;
+    background-color: 	#DCDCDC;
+}
+
+.panel-currencie{
+	border-color:#ddd;
+	background-color: #f5f5f5;
+	margin: 5px;
+}
+
+.panel-toggle{
+	background-color: #f5f5f5;
+}
