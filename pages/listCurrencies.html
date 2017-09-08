@@ -23,6 +23,10 @@
 					<div class="col-xs-7 nopadding" >
 							
 							<div>
+								{{ currencie.symbol }} ({{ currencie.name }})
+							</div>
+							
+							<div>
 								<span class="btn btnPannelCurrencie panel-blue"><i class="fa fa-line-chart"></i></span>
 								{{ currencie.price_btc | limitTo:12 }}
 							</div>						
@@ -52,7 +56,7 @@
 													target="_blank" 
 													title="coinmarketcap : {{ currencie.symbol | uppercase}}"
 													class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-external-link fw"></i>
+									<i class="fa fa-external-link fw  fa-2x"></i>
 								</a>
 							</div>						
 
@@ -63,7 +67,7 @@
 									data-target="#myModal" 
 									ng-click="setSelectedCurrencie(currencie)"
 									class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-plus-square-o"></i>
+									<i class="fa fa-plus-square-o fa-2x"></i>
 								</button>
 							</div>
 
@@ -74,13 +78,22 @@
 									data-target="#myModalDelete" 
 									ng-click="setSelectedCurrencie(currencie)"
 									class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-trash"></i>
+									<i class="fa fa-trash  fa-2x"></i>
 								</button>
 							</div>
 							
 					</div>
 					
-					<div class="detail" ng-show="activeDetail==currencie.symbol || windowWidth >= 450">
+					<div class="detail">
+									
+						<div class="col-xs-12"><hr></div>
+						<div class="col-xs-4">A</div>
+						<div class="col-xs-4">B</div>
+						<div class="col-xs-4">C</div>						
+						
+					</div>
+					
+					<div class="detail">
 									
 						<div class="col-xs-12"><hr></div>
 										

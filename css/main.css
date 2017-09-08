@@ -68,10 +68,11 @@ hr{
 /********************************************** currencies ***********************************************/
 
 .currencieDetail{
+	background-color: white;
 	border: 1px solid #ccc;
-	border-radius: 4px;
-	margin: 4px;
-	padding: 2px;
+	border-radius: 8px;
+	margin: 8px;
+	padding: 4px;
 	width: 300px; 
 }
 
@@ -83,10 +84,10 @@ hr{
 }
 
 .btnActionCurrencie{
-	width:	25px;
-	height: 26px;
-	margin: 3px 0px 0px 0px;
-	padding: 2px;
+	width:	40px;
+	height: 40px;
+	margin: 4px 0px 0px 0px;
+	padding: 4px;
 }
 
 

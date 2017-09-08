@@ -138,7 +138,7 @@ app.service('CurrenciesService', function() {
 	function evalCurrencieStatic($sce,myCrypto) {
 		
 		myCrypto.market_cap_usd=Number(myCrypto.market_cap_usd);
-		myCrypto.png=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/64x64/"+angular.lowercase(myCrypto.id)+".png");
 		
 		return myCrypto;
 	}
