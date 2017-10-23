@@ -1,113 +1,96 @@
 <div ng-controller="ListCurrenciesCtrl">
-	<div ng-include="'./pages/4blocs.html'"></div>
 	
 	<div class="divCenter">
+	
+		<div ng-include="'./pages/headerBloc.html'"></div>
+	
 		<div ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
 			
-			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
-			
-					<div class="col-xs-4 nopadding" >
-						 <ul class="columnCenter nav nav-pills" >
-							<li>
-								<a ng-click="showDetail(currencie.symbol)" class="btn btn-default navbar-btn">
-									<img ng-src="{{ currencie.png }}"  title="{{ currencie.name }}"> 
-									<span class="smallFont">
-										{{ currencie.symbol }}<br/>
-										{{ currencie.rank}}
-									</span>	
-								</a>
-							</li>
-						</ul>
-					</div>
+			<div 	class="container currencieDetail hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" 
+					ng-class="(currencie.alertMin!=null && currencie.alertMin > currencie.price_btc)?'red':(currencie.alertMax!=null && currencie.alertMax < currencie.price_btc)?'green':'white'">
 					
-					<div class="col-xs-7 nopadding" >
-							
-							<div>
-								{{ currencie.symbol }} ({{ currencie.name }})
-							</div>
-							
-							<div>
-								<span class="btn btnPannelCurrencie panel-blue"><i class="fa fa-line-chart"></i></span>
-								{{ currencie.price_btc | limitTo:12 }}
-							</div>						
-
-							<div>
-								<span class="btn btnPannelCurrencie panel-yellow"><i class="fa fa-btc"></i></span>
-								{{ currencie.valueBtc | setDecimal:3 }} <i class="fa fa-btc"></i>
-							</div>
-							
-							<div>	
-								<span class="btn btnPannelCurrencie panel-red"><i class="fa fa-usd"></i></span>
-								{{ currencie.valueDollars | setDecimal:3 }} <i class="fa fa-usd"></i>
-							</div>
-							
-							<div style="white-space: nowrap;">
-									<span class="btn btnPannelCurrencie panel-green"><i class="fa fa-cubes"></i></span>
-									<!--<input class="columnRight" style="width: 85px; height: 20px;" type="text" ng-model="currencie.balance" ng-change="updateMyCryptoBalance(currencie,'{{currencie.balance}}')">-->
-									{{ currencie.balance }} {{ currencie.symbol }}
-							</div>
-						
-					</div>
-					
-					<div class="col-xs-1 nopadding" >
-							
-							<div>
-								<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+					<div class="col-xs-3 logo" >
+						<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
 													target="_blank" 
-													title="coinmarketcap : {{ currencie.symbol | uppercase}}"
-													class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-external-link fw  fa-2x"></i>
-								</a>
+													title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+							<img ng-src="{{ currencie.png }}"  title="{{ currencie.name }}"> 
+						</a>
+					</div>
+					
+					<div class="col-xs-7 verticalHR symbolPadding" >
+							
+							<div class="symbolName">
+								{{ currencie.symbol }} 
+								({{ currencie.name }})
+							</div>
+							
+							<div>
+								{{ currencie.price_btc | limitTo:12 }} <i class="fa fa-btc"></i>
+								<br/>
+								<span class="fontSmall" ng-show="currencie.price_usd<0.001">({{ currencie.price_usd | setDecimal:6 }} $) </span>
+								<span class="fontSmall" ng-show="currencie.price_usd>0.001">({{ currencie.price_usd | setDecimal:2 }} $) </span>
 							</div>						
+					</div>
+											
+					<div class="col-xs-2">
+						<div class="btnActionCurrencie columnNumero">
+							{{$index+1}}
+						</div>
+						<div class="btnActionCurrencie">
+							<i class="fa fa-bell-o" ng-show="(currencie.alertMin !=null) || (currencie.alertMax!=null)"></i>
+						</div>
+					</div>
+						
+					<div class="col-xs-12"><hr/></div>
+					
+					<div class="detail">
+									
 
-							<div style="white-space: nowrap;">
+						<div class="col-xs-5 verticalHR">
+							My Money
+							<br/>
+							<br/>
+							{{ currencie.valueBtc | setDecimal:3 }} <i class="fa fa-btc"></i>
+							<br/>
+							{{ currencie.valueDollars | setDecimal:3 }} <i class="fa fa-usd"></i>
+						</div>
+						<div class="col-xs-5 verticalHR">
+							My coins
+							<br/>
+							<br/>
+							{{ currencie.balance }} 
+						</div>
+						<div class="col-xs-2 decalLeft">
+							
 								<button 
 									type="button" 
 									data-toggle="modal" 
 									data-target="#myModal" 
 									ng-click="setSelectedCurrencie(currencie)"
 									class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-plus-square-o fa-2x"></i>
+									<i class="fa fa-plus-square-o fa"></i>
 								</button>
-							</div>
-
-							<div>
+							
 								<button 
 									type="button" 
 									data-toggle="modal" 
 									data-target="#myModalDelete" 
 									ng-click="setSelectedCurrencie(currencie)"
 									class="btn btn-default navbar-btn btnActionCurrencie">
-									<i class="fa fa-trash  fa-2x"></i>
+									<i class="fa fa-trash  fa"></i>
 								</button>
-							</div>
 							
-					</div>
-					
-					<div class="detail">
-									
-						<div class="col-xs-12"><hr></div>
-						<div class="col-xs-4">A</div>
-						<div class="col-xs-4">B</div>
-						<div class="col-xs-4">C</div>						
+						
+						</div>						
 						
 					</div>
 					
 					<div class="detail">
 									
-						<div class="col-xs-12"><hr></div>
+						<div class="col-xs-12 "><hr/></div>
 										
 						<div class="col-xs-5 label columnLeft">MarketCap :</div>
 						<div class="col-xs-7 value">{{ currencie.market_cap_usd | number:3 }} <i class="fa fa-usd"></i></div>
-						<!--
-						<div class="col-xs-5 label columnLeft">Volume 24h :</div>
-						<div class="col-xs-7 value">{{ currencie.24h_volume_usd | number:3 }} <i class="fa fa-usd"></i></div>
-						-->
-						<div class="col-xs-5 label columnLeft">price :</div>
-						<div class="col-xs-7 value">{{ currencie.price_usd | limitTo:7 }} <i class="fa fa-usd"></i></div>
-						
-						<div class="col-xs-5 label columnLeft">AvailableSupply :</div>
-						<div class="col-xs-7 value">{{ currencie.available_supply | number:3 }} {{ currencie.symbol }}</div>
 						
 						<div class="col-xs-5 label columnLeft">Change 24h :</div>
 						<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }">{{ currencie.percent_change_24h }} %</div>
@@ -129,10 +112,62 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h4 class="modal-title">{{selectedCurrencie.symbol}} balance</h4>
+				  <h4 class="modal-title columnCenter">{{selectedCurrencie.symbol}}</h4>
 				</div>
-				<div class="modal-body">
-				  <input type="number" class="columnRight" style="width: 150px; height: 20px;" ng-model="selectedCurrencie.balance" ng-change="updateMyCryptoBalance(selectedCurrencie,'{{selectedCurrencie.balance}}')">
+				<div class="row modal-body">
+					<div class="col-xs-12"><h4>Investment</h4></div>
+					
+					<div class="col-xs-3">Price</div>
+					<div class="col-xs-6 columnRight">	
+						{{ selectedCurrencie.price_btc | limitTo:12 }} 
+					</div>
+					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
+					
+					<div class="col-xs-3 columnLeft">My coins</div>
+					<div class="col-xs-6 columnRight">
+						<input 	type="number"
+									class="columnRight"
+									style="width: 120px; height: 20px;" ng-model="selectedCurrencie.balance" 
+									ng-change="updateMyCryptoBalance(selectedCurrencie,'{{selectedCurrencie.balance}}')">
+					</div>
+					<div class="col-xs-3 columnLeft">{{selectedCurrencie.symbol}}</div>
+					
+					<div class="col-xs-3">My money</div>
+					<div class="col-xs-6 columnRight">	
+						{{ selectedCurrencie.price_btc * selectedCurrencie.balance | limitTo:12 }}
+					</div>
+					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
+					
+					<div class="col-xs-9 columnRight">	
+						{{ selectedCurrencie.price_btc * selectedCurrencie.balance * btcPrice | limitTo:12 }}
+					</div>
+					<div class="col-xs-3 columnLeft"><i class="fa fa-usd"></i></div>
+					
+					<div class="col-xs-12"><hr/></div>
+					
+					<div class="col-xs-12"><h4>Alert</h4></div>
+					
+					<div class="col-xs-3 columnLeft"></div>
+					<div class="col-xs-6 columnLeft">	
+						<input 	type="number" 
+								step="0.00000001"
+								class="columnRight" 
+								style="width: 130px; height: 20px;" ng-model="selectedCurrencie.alertMax" 
+								>
+					</div>
+					<div class="col-xs-3 columnLeft">MAX</div>
+					
+					
+					<div class="col-xs-3 columnLeft"></div>
+					<div class="col-xs-6 columnLeft">	
+						<input 	type="number" 
+								step="0.00000001"
+								class="columnRight" 
+								style="width: 130px; height: 20px;" ng-model="selectedCurrencie.alertMin" 
+								>
+					</div>
+					<div class="col-xs-3 columnLeft">MIN</div>
+									
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>

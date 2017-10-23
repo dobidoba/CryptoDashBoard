@@ -64,11 +64,13 @@ function ChartsCtrl(CurrenciesService,$scope) {
 		$(chartId).css("top", height + "px");
 	}
 	
+// ##############################################################################
+	
 	function investChart($scope) {
 		
 		$scope.investChartDataSource = {
 				  "chart": {
-					"caption": "Coins distribution",
+					"caption": "Investment",
 					"showborder": "1",
 					"boderColor": "#D8D8D8",
 					"bgColor": "#ffffff",
@@ -115,14 +117,16 @@ function ChartsCtrl(CurrenciesService,$scope) {
 				chart.dispose();
 			}
 			var revenueChart = new FusionCharts({
-        id: 'revenue-chart',
-        type: 'column2d',
-        renderAt: 'chart-container',
-        dataFormat: 'json',
-        dataSource: jsondata
-        });
+				id: 'revenue-chart',
+				type: 'pie2d',
+				renderAt: 'chart-container',
+				dataFormat: 'json',
+				dataSource: jsondata
+			});
     revenueChart.render();
 	}
+	
+// ##############################################################################
 	
 	function changeChart7d($scope) {
 		$scope.changeChart7dDataSource = {
@@ -155,6 +159,7 @@ function ChartsCtrl(CurrenciesService,$scope) {
 		}
 	}
 	
+ // ##############################################################################	
 	
 	function changeChart24h($scope) {
 		$scope.changeChart24hDataSource = {

@@ -1,0 +1,53 @@
+	
+			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				
+					<div class="row">
+						<div class="col-xs-3" style="nowrap">
+							<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png" title="Bitcoin" src="https://files.coinmarketcap.com/static/img/coins/64x64/bitcoin.png">
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge">{{ btcPrice | setDecimal:2 }} <i class="fa fa-usd fa"></i></div>
+						</div>
+						<div class="col-xs-12"><hr/></div>
+						<div class="col-xs-3">
+							<i class="fa fa-bank fa-2x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div ng-show="totalBtcValue!=0" class="huge">{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i></div>
+						</div>
+						<div class="col-xs-12"><hr/></div>
+						<div class="col-xs-3">
+							<i class="fa fa-money fa-2x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div ng-show="currenciesFavorites.length!=0" class="huge">{{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i></div>
+							<div ng-show="currenciesFavorites.length==0"><i class="fa fa-spinner fa-spin fa-2x valueGrey"></i></div>
+							<div >{{}}</div>
+						</div>
+						
+						<div class="col-xs-12"><hr/></div>
+						<div class="col-xs-12 xsCenter" ng-show="totalBtcValue!=0">
+						
+							  <ui-select ng-model="currentCrypto.selected" theme="select2" ng-disabled="disabled" style="min-width: 250px;">
+								<ui-select-match placeholder="Select a currencie..."><img ng-src="{{ $select.selected.png16 }}" /> {{$select.selected.symbol + ' (' + $select.selected.name + ')' }}</ui-select-match>
+								<ui-select-choices 	repeat="currencie in currencies | propsFilter: {name: $select.search, symbol: $select.search} | limitTo:infiniteScroll.currentItems"
+													infinite-scroll="addMoreItems()"
+													infinite-scroll-distance="2">
+								  <img ng-src="{{ currencie.png16 }}" />
+								  <div ng-bind-html="currencie.symbol + ' (' + currencie.name + ')' | highlight: $select.search" style="display: inline"></div>
+								</ui-select-choices>
+							  </ui-select>
+						
+								<button 
+									type="button" 
+									ng-click="addcurrencie(currentCrypto.selected)"
+									class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-plus-square-o fa"></i>
+								</button>
+						
+						</div>	
+						
+					</div>
+				
+			</div>
+	

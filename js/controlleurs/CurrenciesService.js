@@ -1,4 +1,4 @@
-app.service('CurrenciesService', function() {
+app.service('CurrenciesService', function(StorageService) {
 
 
 	var appData={
@@ -45,9 +45,9 @@ app.service('CurrenciesService', function() {
 
 	this.updateCurrenciesFavorites = function($scope,$sce,currenciesFavorites) {
 		console.log("CurrenciesCtrl.updateCurrenciesFavorites()");
-		
+
 		appData.totalBtcValue = 0;
-		 
+		
 		// traitement de chaque currencie
 		angular.forEach(currenciesFavorites,
 			function(currencie){
@@ -58,6 +58,9 @@ app.service('CurrenciesService', function() {
 		// MAJ SCOPE
 		$scope.totalBtcValue = appData.totalBtcValue;
 		$scope.currenciesFavorites = appData.currenciesFavorites;
+		
+		// MAJ STORAGE
+		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	}
 	
 	this.addCurrencieToFavorites = function($scope,$sce,currencieFavorite) {
@@ -68,6 +71,9 @@ app.service('CurrenciesService', function() {
 		// MAJ SCOPE
 		$scope.totalBtcValue = appData.totalBtcValue;
 		$scope.currenciesFavorites = appData.currenciesFavorites;
+		
+		// MAJ STORAGE
+		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	};
 	
 	this.removeCurrencieFromFavorites = function($scope,currencieFavorite) {
@@ -76,9 +82,8 @@ app.service('CurrenciesService', function() {
 		var myCrypto = getCurrencie(appData.currenciesFavorites,currencieFavorite.symbol);
 		
 		// Valeur totale en BTC
-		console.log(appData.totalBtcValue);
 		appData.totalBtcValue = appData.totalBtcValue - (myCrypto.price_btc)*(myCrypto.balance);
-		console.log(appData.totalBtcValue);
+
 		// Remove
 		appData.currenciesFavorites.splice( appData.currenciesFavorites.indexOf(myCrypto),1);
 		
@@ -88,6 +93,9 @@ app.service('CurrenciesService', function() {
 		// MAJ SCOPE
 		$scope.totalBtcValue = appData.totalBtcValue;
 		$scope.currenciesFavorites = appData.currenciesFavorites;
+		
+		// MAJ STORAGE
+		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	};
 	
 	this.changeBalance = function($scope, myCrypto,oldBalance) {
@@ -99,6 +107,9 @@ app.service('CurrenciesService', function() {
 
 		// MAJ SCOPE
 		$scope.totalBtcValue = appData.totalBtcValue;
+		
+		// MAJ STORAGE
+		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	}
 	
 // ##############################################################################
@@ -107,20 +118,39 @@ app.service('CurrenciesService', function() {
 	// construction et ajout d'une currencie
 	function addCurrencie($sce,currencie) {
 		
-		var myCrypto = getCurrencie(appData.currenciesAll,currencie.symbol);
-		
-		myCrypto.balance = parseInt(currencie.balance);
-		if (isNaN(myCrypto.balance)){
-			myCrypto.balance = 0;
+		if (currencie==null){
+			return;
 		}
-		myCrypto.favorite=true;
-		myCrypto=evalCurrencieStatic($sce,myCrypto);
-		myCrypto=evalCurrencieCalculate(myCrypto);
 		
-		// Valeur totale en BTC
-		appData.totalBtcValue = appData.totalBtcValue + (myCrypto.price_btc)*(myCrypto.balance);
-		// toutes les cryptos
-		appData.currenciesFavorites.push(myCrypto);	
+		var myCrypto = getCurrencie(appData.currenciesAll,currencie.symbol);
+		var myCryptoFav = getCurrencie(appData.currenciesFavorites,currencie.symbol);;
+
+		if (myCryptoFav==null){	
+			myCrypto.balance = parseInt(currencie.balance);
+
+			if (currencie.alertMin) {
+				myCrypto.alertMin = parseFloat(currencie.alertMin);
+			}else{
+				myCrypto.alertMin = null;
+			}
+			if (currencie.alertMax) {
+				myCrypto.alertMax = parseFloat(currencie.alertMax);
+			}else{
+				myCrypto.alertMax = null;
+			}
+			
+			if (isNaN(myCrypto.balance)){
+				myCrypto.balance = 0;
+			}
+			myCrypto.favorite=true;
+			myCrypto=evalCurrencieStatic($sce,myCrypto);
+			myCrypto=evalCurrencieCalculate(myCrypto);
+			
+			// Valeur totale en BTC
+			appData.totalBtcValue = appData.totalBtcValue + (myCrypto.price_btc)*(myCrypto.balance);
+			// toutes les cryptos
+			appData.currenciesFavorites.push(myCrypto);	
+		}
 	}
 
 	function getCurrencie(currencies,symbol) {
@@ -139,6 +169,8 @@ app.service('CurrenciesService', function() {
 		
 		myCrypto.market_cap_usd=Number(myCrypto.market_cap_usd);
 		myCrypto.png=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/64x64/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png16=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/16x16/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png32=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
 		
 		return myCrypto;
 	}
@@ -154,8 +186,25 @@ app.service('CurrenciesService', function() {
 		if (isNaN(value)) return 0;
 		return value;
 	}
-
-
+	
+	function toFixed(x) {
+		console.log(x);
+	  if (x != undefined && Math.abs(x) < 1.0) {
+		var e = parseInt(x.toString().split('e-')[1]);
+		if (e) {
+			x *= Math.pow(10,e-1);
+			x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+		}
+	  } else {
+		var e = parseInt(x.toString().split('+')[1]);
+		if (e > 20) {
+			e -= 20;
+			x /= Math.pow(10,e);
+			x += (new Array(e+1)).join('0');
+		}
+	  }
+	  return x;
+	}
 		
 	
 });

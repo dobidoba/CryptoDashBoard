@@ -10,7 +10,7 @@ app.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache'; 
 }]);
 
-app.service('RequestService', function(StorageService) {
+app.service('RequestService', function() {
 
 	// #### getCurrencies
 	this.getCurrencies = function($http) {
@@ -21,7 +21,6 @@ app.service('RequestService', function(StorageService) {
 		});
 		
         return $http.get("/currencies.json?callback=JSON_CALLBACK").then(function(data){
-			//StorageService.saveCurrencies(data.data);
 			console.log("Currencies loaded : " + data.data.length);
 			return data.data;
         });
@@ -32,7 +31,6 @@ app.service('RequestService', function(StorageService) {
 		console.log("RequestService.getCurrenciesFavorites()");
 		
         return $http.get("/currenciesFavorites.json?callback=JSON_CALLBACK").then(function(data){
-			//StorageService.saveCurrenciesFavorites(data.data);
 			console.log("Currencies Favorite loaded : " + data.data.length);
 			return data.data;
         });

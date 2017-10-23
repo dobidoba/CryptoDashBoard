@@ -1,5 +1,5 @@
-    <div>
-		
+    <div class="divCenter">
+		<div>
 		<table class="table table-striped">
     
 			<tbody>
@@ -31,6 +31,25 @@
 					<A HREF="https://cryptocommunity.slack.com/" target="_blank">https://cryptocommunity.slack.com/</A>
 				</td>
 			  </tr>
+			  <tr>
+				<td>
+					<i class="btn btn-secondary fa fa-file-code-o fa-2x"></i>
+					<span class="smallFont columnCenter">Json</span>
+				</td>
+				<td style="vertical-align: middle;">
+					<a href = "{{downloadCurrenciesFavorites()}}" id = "saveCurrenciesFavorites" download="currencies.json" class="btn btn-default navbar-btn btnActionCurrencie"><i class="fa fa-save fa"></i></a>
+					<button 
+						type="button" 
+						data-toggle="modal" 
+						data-target="#modalJson" 
+						ng-click="showCurrenciesFavorites()"
+						class="btn btn-default navbar-btn btnActionCurrencie">
+						<i class="fa fa-eye  fa"></i>
+					</button>
+					<br/>
+					<!--<input type="file" id="load" />-->
+				</td>
+			  </tr>			  
 			   <tr>
 				<td>
 					<i class="btn btn-secondary fa fa-copyright fa-2x"></i>
@@ -43,9 +62,26 @@
 			</tbody>
 		
 	  </table>
-		
-	</div>
+	  </div>
 	
+		<!-- Modal -->
+	  <div class="modal fade" id="modalJson" role="dialog">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">My currencies Json</h4>
+			</div>
+			<div class="row modal-body">
+			
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+	  
+		  
 	<script>
 			document.getElementById("copyButton").addEventListener("click", function() {
 				copyToClipboard(document.getElementById("copyTarget"));

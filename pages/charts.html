@@ -1,10 +1,11 @@
 <div ng-controller="ChartsCtrl">
-				
+	
 	<div id="charts" class="center">
+			<div id="chart-container">loading investment chart...</div>
 			<div fusioncharts id="chart1" class="chart" type="column2d" 	height="{{chartHeight}}" width="{{chartWidth}}" datasource="{{changeChart24hDataSource}}"></div>
 			<div fusioncharts id="chart2" class="chart" type="column2d" 	height="{{chartHeight}}" width="{{chartWidth}}" datasource="{{changeChart7dDataSource}}"></div>
 			<!--<div fusioncharts id="chart3" class="chart" type="pie2d" 	    height="{{chartHeight}}" width="{{chartWidth}}" datasource="{{investChartDataSource}}"></div>-->
-			<div id="chart-container">FusionCharts will render here</div>
+			
 	</div>
 	
 </div>

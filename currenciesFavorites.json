@@ -1,114 +1,222 @@
 [
-	{
-        "symbol": "BTC", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "rank": "1",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     },
     {
-        "symbol": "ESP", 
-        "balance": "5000000",
-		"favorite": "true"
-    }, 
+        "id": "espers",
+        "name": "Espers",
+        "symbol": "ESP",
+        "rank": "349",
+        "balance": 5000000,
+        "alertMin": 2e-8,
+        "alertMax": 4e-8,
+        "favorite": true
+    },
     {
-        "symbol": "STRAT", 
-        "balance": "605",
-		"favorite": "true"
+        "id": "stratis",
+        "name": "Stratis",
+        "symbol": "STRAT",
+        "rank": "22",
+        "balance": 605,
+        "alertMin": 0.0005,
+        "alertMax": 0.00065,
+        "favorite": true
     },
-	{
-        "symbol": "SHIFT", 
-        "balance": "630",
-		"favorite": "true"
+    {
+        "id": "shift",
+        "name": "Shift",
+        "symbol": "SHIFT",
+        "rank": "218",
+        "balance": 630,
+        "alertMin": 0.00015,
+        "alertMax": 0.0002,
+        "favorite": true
     },
-	{
-        "symbol": "VEC2", 
-        "balance": "7007",
-		"favorite": "true"
+    {
+        "id": "vector",
+        "name": "Vector",
+        "symbol": "VEC2",
+        "rank": "789",
+        "balance": 7007,
+        "alertMin": 4e-7,
+        "alertMax": 0.0000015,
+        "favorite": true
     },
-	{
-        "symbol": "TRST", 
-        "balance": "1671",
-		"favorite": "true"
+    {
+        "id": "trust",
+        "name": "WeTrust",
+        "symbol": "TRST",
+        "rank": "116",
+        "balance": 1671,
+        "alertMin": 0.000055,
+        "alertMax": 0.00007,
+        "favorite": true
     },
-	{
-        "symbol": "WINGS", 
-        "balance": "89",
-		"favorite": "true"
+    {
+        "id": "wings",
+        "name": "Wings",
+        "symbol": "WINGS",
+        "rank": "100",
+        "balance": 89,
+        "alertMin": 0.000075,
+        "alertMax": 0.0001,
+        "favorite": true
     },
-	{
-        "symbol": "HMQ", 
-        "balance": "1820",
-		"favorite": "true"
+    {
+        "id": "humaniq",
+        "name": "Humaniq",
+        "symbol": "HMQ",
+        "rank": "203",
+        "balance": 1820,
+        "alertMin": 0.000012,
+        "alertMax": 0.000015,
+        "favorite": true
     },
-	{
-        "symbol": "ANT", 
-        "balance": "51",
-		"favorite": "true"
+    {
+        "id": "aragon",
+        "name": "Aragon",
+        "symbol": "ANT",
+        "rank": "87",
+        "balance": 51,
+        "alertMin": 0.00028,
+        "alertMax": 0.00035,
+        "favorite": true
     },
-	{
-        "symbol": "CVC", 
-        "balance": "0",
-		"favorite": "true"
-    }
-	,
-	{
-        "symbol": "ARK", 
-        "balance": "0",
-		"favorite": "true"
-    }
-	,
-	{
-        "symbol": "XEL", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "civic",
+        "name": "Civic",
+        "symbol": "CVC",
+        "rank": "54",
+        "balance": 0,
+        "alertMin": 0.00006,
+        "alertMax": 0.00007,
+        "favorite": true
     },
-	{
-        "symbol": "PART", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "ark",
+        "name": "Ark",
+        "symbol": "ARK",
+        "rank": "23",
+        "balance": 0,
+        "alertMin": 0.00051,
+        "alertMax": 0.00054,
+        "favorite": true
     },
-	{
-        "symbol": "TIME", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "elastic",
+        "name": "Elastic",
+        "symbol": "XEL",
+        "rank": "123",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     },
-	{
-        "symbol": "QTUM", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "particl",
+        "name": "Particl",
+        "symbol": "PART",
+        "rank": "90",
+        "balance": 0,
+        "alertMin": 0.00115,
+        "alertMax": 0.0012,
+        "favorite": true
     },
-	{
-        "symbol": "BNT", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "chronobank",
+        "name": "Chronobank",
+        "symbol": "TIME",
+        "rank": "180",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     },
-	{
-        "symbol": "MIOTA", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "qtum",
+        "name": "Qtum",
+        "symbol": "QTUM",
+        "rank": "13",
+        "balance": 0,
+        "alertMin": 0.0021,
+        "alertMax": 0.0022,
+        "favorite": true
     },
-	{
-        "symbol": "XSPEC", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "bancor",
+        "name": "Bancor",
+        "symbol": "BNT",
+        "rank": "70",
+        "balance": 0,
+        "alertMin": 0.0003,
+        "alertMax": 0.0004,
+        "favorite": true
     },
-	{
-        "symbol": "ADC", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "iota",
+        "name": "IOTA",
+        "symbol": "MIOTA",
+        "rank": "11",
+        "balance": 0,
+        "alertMin": 0.00007,
+        "alertMax": 0.00008,
+        "favorite": true
     },
-	{
-        "symbol": "DCT", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "spectrecoin",
+        "name": "Spectrecoin",
+        "symbol": "XSPEC",
+        "rank": "250",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     },
-	{
-        "symbol": "BRO", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "decent",
+        "name": "DECENT",
+        "symbol": "DCT",
+        "rank": "133",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     },
-	{
-        "symbol": "XLR", 
-        "balance": "0",
-		"favorite": "true"
+    {
+        "id": "opus",
+        "name": "Opus",
+        "symbol": "OPT",
+        "rank": "363",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
+    },
+    {
+        "id": "voisecom",
+        "name": "Voise",
+        "symbol": "VOISE",
+        "rank": "216",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
+    },
+    {
+        "id": "viberate",
+        "name": "Viberate",
+        "symbol": "VIB",
+        "rank": "166",
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
     }
 ]

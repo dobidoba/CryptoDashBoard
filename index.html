@@ -1,83 +1,89 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html 
+	lang="fr"
+	xmlns:og="http://ogp.me/ns#">
 
-<head>
+	<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	
-    <title>My Crypto-Currency Dashboard</title>
+		<title>Crypto Currency Dashboard (bitcoin, ethereum,... price alert)</title>
+		
+		<meta name="description" content="Bitcoin and crypto currencies price alerts. Price tracking for bitcoin, ethereum, ...for traders (BTC, ETH, LTC, DASH, XMR, ...)" />
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<meta property="og:title" content="Crypto Currency Dashboard" />
+		<meta property="og:type" content="Crypto Currencies Dashboard" />
+		<meta property="og:url" content="http://www.crypto-dashboard.com/" />
+		<meta property="og:image" content="http://www.crypto-dashboard.com/img/smartphone.jpg" />
+		
+		<!-- Bootstrap Core CSS -->
+		<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="./css/sb-admin-2.css" rel="stylesheet">
-	<link href="./css/main.css" rel="stylesheet">
-	
-    <!-- Custom Fonts -->
-    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
-</head>
+		<!-- Custom CSS -->
+		<link href="./css/sb-admin-2.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
+		
+		<!-- Custom Fonts -->
+		<link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="./bower_components/ui-select/dist/select.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+		
+	</head>
 
 <body ng-app="MyCryptoApp" ng-controller="MainCtrl">
 
     <div id="wrapper">
-
-		<div ng-include="'./pages/navigation.html'"></div>
-
-        <div id="page-wrapper" class="tab-content">
-            
-			<!--
-			<div id="zonePub1" class="visible-sm visible-md visible-lg">
-				<div id="coinTrafficTop">
-					coinTrafficZ
+	
+		<!-- NAVIGATION -->
+		<nav class="navbar navbar-default hidden-before-450" role="navigation" style="margin-bottom: 0">
+			<div id="navBar" class="navbar-static-top">
+				<div class="navbar-brand xsCenter">
+					Crypto Dashboard
+				</div>	
+				<div id="navBarBtn" class="navbar-brand xsCenter">
+					<ul class="nav btn nav-pills">
+						<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
+						<li><a data-toggle="tab" href="#chartsTab" class="btn btn-default navbar-btn"> <i class="fa fa-bar-chart fa-fw"></i></a></li>
+						<!--<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>-->
+						<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
+					</ul>
 				</div>
+				
 			</div>
-			-->
-			
-			
+		</nav>
+
+		
+		<!-- WRAPPER -->
+        <div id="page-wrapper" class="tab-content">
+         
 			<div id="generalTab" class="tab-pane fade in active">
 					<div ng-include="'./pages/listCurrencies.html'"></div>
 			</div>
 		
-			<div id="addTab" class="tab-pane fade">
-				<div ng-include="'./pages/addCurrencies.html'"></div>
-			</div>
-			
 			<div id="chartsTab" class="tab-pane fade">
 				<div ng-include="'./pages/charts.html'"></div>
 			</div>
-	
+	<!--
 			<div id="helpTab" class="tab-pane fade">
 				<div ng-include="'./pages/help.html'"></div>
 			</div>
-	
+	-->
 			<div id="copyrightTab" class="tab-pane fade">
 				<div ng-include="'./pages/copyright.html'"></div>
 			</div>
 			
-			<!--
-			<div id="zonePub2">
-				<a href="#" onclick="document.getElementById('zonePub2').style.display = 'none';">Close</a>
-				coinTraffic
-			</div>
-			-->
-			
         </div>
-        <!-- /#page-wrapper -->
+        
 		
+		<!-- NAVIGATION -->
 		<div id="footer" class="footer hidden-after-451">
 
 			<div id="navBarBtn" class="navbar-brand xsCenter">
 				<ul class="nav btn nav-pills">
 					<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
-					<li><a data-toggle="tab" href="#addTab" class="btn btn-default navbar-btn"><i class="fa fa-plus-square-o fa-fw"></i></a></li>
 					<li><a data-toggle="tab" href="#chartsTab" class="btn btn-default navbar-btn"> <i class="fa fa-bar-chart fa-fw"></i></a></li>
-					<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
+					<!--<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>-->
 					<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
 				</ul>
 			</div>
@@ -95,7 +101,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>-->
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
@@ -105,23 +111,25 @@
 	<script type="text/javascript" src="./js/fusioncharts/js/themes/fusioncharts.theme.zune.js"></script>
 	
 	<!-- Angular and adds-->
-	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
-	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
 	<script src="./js/fusioncharts/js/angular-fusioncharts.min.js"></script>
 	<script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+	<!-- infinite scroll file -->
+	<script src="./js/infinite-scroll.js"></script>
+	<script src="./bower_components/ui-select/dist/select.js"></script>
 	
 	<!-- MyCryptoApp --> 
 	<script src="./js/MyCryptoApp.js"></script>
 	<script src="./js/MyCryptoFilters.js"></script>
 	<script src="./js/controlleurs/MainCtrl.js"></script>
 	<script src="./js/controlleurs/ListCurrenciesCtrl.js"></script>
-	<script src="./js/controlleurs/AddCurrenciesCtrl.js"></script>
 	<script src="./js/controlleurs/FusionChartsCtrl.js"></script>
 	<script src="./js/controlleurs/StorageService.js"></script>
 	<script src="./js/controlleurs/RequestService.js"></script>
 	<script src="./js/controlleurs/CurrenciesService.js"></script>
-	
 	
 </body>
 
