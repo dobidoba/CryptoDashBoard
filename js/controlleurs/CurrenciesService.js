@@ -98,6 +98,11 @@ app.service('CurrenciesService', function(StorageService) {
 		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	};
 	
+	this.removeAllCurrencieFromFavorites = function($scope) {
+		appData.currenciesFavorites = [];
+		$scope.currenciesFavorites = appData.currenciesFavorites;
+	}
+	
 	this.changeBalance = function($scope, myCrypto,oldBalance) {
 		evalCurrencieCalculate(myCrypto);
 		
@@ -117,6 +122,8 @@ app.service('CurrenciesService', function(StorageService) {
 
 	// construction et ajout d'une currencie
 	function addCurrencie($sce,currencie) {
+		//console.log("CurrenciesService.addCurrencie");
+		//console.log(currencie);
 		
 		if (currencie==null){
 			return;

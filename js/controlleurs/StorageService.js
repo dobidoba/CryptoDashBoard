@@ -26,7 +26,7 @@ app.service('StorageService', function($cacheFactory, $location) {
 		var currenciesJson=[];
 			angular.forEach(data,
 				function(cryptoCMC){
-					console.log(cryptoCMC);
+					//console.log(cryptoCMC);
 					var myCrypto = {};
 					
 					myCrypto.id = cryptoCMC.id;

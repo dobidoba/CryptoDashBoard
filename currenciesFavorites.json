@@ -34,7 +34,7 @@
         "name": "Shift",
         "symbol": "SHIFT",
         "rank": "218",
-        "balance": 630,
+        "balance": 789,
         "alertMin": 0.00015,
         "alertMax": 0.0002,
         "favorite": true
@@ -54,7 +54,7 @@
         "name": "WeTrust",
         "symbol": "TRST",
         "rank": "116",
-        "balance": 1671,
+        "balance": 810,
         "alertMin": 0.000055,
         "alertMax": 0.00007,
         "favorite": true

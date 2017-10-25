@@ -17,7 +17,7 @@
 						</a>
 					</div>
 					
-					<div class="col-xs-7 verticalHR symbolPadding" >
+					<div class="col-xs-7 divPadding verticalHR" >
 							
 							<div class="symbolName">
 								{{ currencie.symbol }} 
@@ -45,21 +45,16 @@
 					
 					<div class="detail">
 									
+						<div class="col-xs-3">
+						</div>
+						<div class="col-xs-7 divPadding verticalHR">
+							{{ currencie.balance }} {{ currencie.symbol }} 
+							<br/>
+							{{ currencie.valueBtc | setDecimal:5 }} <i class="fa fa-btc"></i>
+							<br/>
+							<span class="fontSmall">({{ currencie.valueDollars | number:2 }} <i class="fa fa-usd"></i>)</span>
+						</div>
 
-						<div class="col-xs-5 verticalHR">
-							My Money
-							<br/>
-							<br/>
-							{{ currencie.valueBtc | setDecimal:3 }} <i class="fa fa-btc"></i>
-							<br/>
-							{{ currencie.valueDollars | setDecimal:3 }} <i class="fa fa-usd"></i>
-						</div>
-						<div class="col-xs-5 verticalHR">
-							My coins
-							<br/>
-							<br/>
-							{{ currencie.balance }} 
-						</div>
 						<div class="col-xs-2 decalLeft">
 							
 								<button 
@@ -112,18 +107,18 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h4 class="modal-title columnCenter">{{selectedCurrencie.symbol}}</h4>
+				  <h4 class="modal-title">{{selectedCurrencie.symbol}}</h4>
 				</div>
 				<div class="row modal-body">
 					<div class="col-xs-12"><h4>Investment</h4></div>
 					
-					<div class="col-xs-3">Price</div>
+					<div class="col-xs-3 columnLeft">Price</div>
 					<div class="col-xs-6 columnRight">	
 						{{ selectedCurrencie.price_btc | limitTo:12 }} 
 					</div>
 					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
 					
-					<div class="col-xs-3 columnLeft">My coins</div>
+					<div class="col-xs-3 columnLeft">Number</div>
 					<div class="col-xs-6 columnRight">
 						<input 	type="number"
 									class="columnRight"
@@ -132,14 +127,14 @@
 					</div>
 					<div class="col-xs-3 columnLeft">{{selectedCurrencie.symbol}}</div>
 					
-					<div class="col-xs-3">My money</div>
+					<div class="col-xs-3 columnLeft">Total</div>
 					<div class="col-xs-6 columnRight">	
 						{{ selectedCurrencie.price_btc * selectedCurrencie.balance | limitTo:12 }}
 					</div>
 					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
 					
 					<div class="col-xs-9 columnRight">	
-						{{ selectedCurrencie.price_btc * selectedCurrencie.balance * btcPrice | limitTo:12 }}
+						{{ selectedCurrencie.price_btc * selectedCurrencie.balance | limitTo:12 }}
 					</div>
 					<div class="col-xs-3 columnLeft"><i class="fa fa-usd"></i></div>
 					

@@ -20,7 +20,9 @@ function MainCtrl(RequestService,CurrenciesService,StorageService,$scope,$http,$
 
 			
 // ##############################################################################
-/* ##### FONCTIONS Copyright */
+/* ##### FONCTIONS Json Copyright */
+
+
 
 	$scope.downloadCurrenciesFavorites = function () {
 		
@@ -39,11 +41,23 @@ function MainCtrl(RequestService,CurrenciesService,StorageService,$scope,$http,$
 	};
 	
 	
-	$scope.uploadCurrenciesFavorites = function () {
+	$scope.LoadFileData = function(files) {
+		$scope.files = files;
+		console.log(files[0]);
+		var reader = new FileReader();
+        reader.onload = onReaderLoad;
+        reader.readAsText(files[0]);
 		
-		$( "#saveCurrenciesFavorites" ).click(function( event ) {
-			this.href = 'data:plain/text,' + JSON.stringify($scope.currenciesFavorites);
-		});
+		this.showCurrenciesFavorites();
 	};
+	
+	function onReaderLoad(event){
+        var obj = JSON.parse(event.target.result);
+		CurrenciesService.removeAllCurrencieFromFavorites($scope);
+		CurrenciesService.updateCurrenciesFavorites($scope,$sce,obj);
+    }
+	
+		
+	
   
 };
