@@ -119,6 +119,10 @@ app.service('CurrenciesService', function(StorageService) {
 		// MAJ STORAGE
 		StorageService.saveCurrenciesFavorites($scope.currenciesFavorites);
 	}
+
+	this.getCurrencie= function(currencies,symbol) {
+		return getCurrencie(currencies,symbol);
+	}
 	
 // ##############################################################################
 /* ##### PRIVATE */

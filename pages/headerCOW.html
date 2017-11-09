@@ -1,0 +1,31 @@
+	
+			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				
+					<div class="row">
+						<div class="col-xs-12">Coin of the week</div>
+						<div class="col-xs-12"><hr/></div>
+						<div class="col-xs-2">
+							<div id="containerIntro">
+								<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/espers.png" title="Bitcoin" src="https://files.coinmarketcap.com/static/img/coins/64x64/bitcoin.png">
+								
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="symbolName">
+									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+									target="_blank" 
+									title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+										{{ getCurrencie(currenciesFavorites,'ESP').symbol }} 
+										({{ getCurrencie(currenciesFavorites,'ESP').name }})
+									</a>
+								</div>
+						</div>
+						<div class="col-xs-5 text-right">
+							<div >{{ getCurrencie(currenciesFavorites,'ESP').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
+							<div ng-style="{ 'color': getCurrencie(currenciesFavorites,'ESP').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currenciesFavorites,'ESP').percent_change_24h }} %</div>
+						</div>
+						
+					</div>
+				
+			</div>
+	

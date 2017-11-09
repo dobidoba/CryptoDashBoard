@@ -3,7 +3,8 @@
 	<div class="divCenter">
 	
 		<div ng-include="'./pages/headerBloc.html'"></div>
-	
+		<div ng-include="'./pages/headerCOW.html'"></div>
+
 		<div ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
 			
 			<div 	class="container currencieDetail hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" 
@@ -20,8 +21,12 @@
 					<div class="col-xs-7 divPadding verticalHR" >
 							
 							<div class="symbolName">
-								{{ currencie.symbol }} 
-								({{ currencie.name }})
+								<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+								target="_blank" 
+								title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+									{{ currencie.symbol }} 
+									({{ currencie.name }})
+								</a>
 							</div>
 							
 							<div>

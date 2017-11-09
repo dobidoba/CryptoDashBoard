@@ -46,7 +46,13 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
 		  $scope.activeDetail = null;
 		}
 	};
-  
+
+	$scope.getCurrencie = function (currencies,symbol) {
+		
+		return CurrenciesService.getCurrencie(currencies,symbol);
+		
+	}
+
   // ## selectedCurrencie
 	$scope.setSelectedCurrencie = function(selectedCurrencie){
 		console.log("ListCurrenciesCtrl.setSelectedCurrencie()");
