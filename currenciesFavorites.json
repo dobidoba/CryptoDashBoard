@@ -14,9 +14,9 @@
         "name": "Espers",
         "symbol": "ESP",
         "rank": "349",
-        "balance": 5000000,
-        "alertMin": 2e-8,
-        "alertMax": 4e-8,
+        "balance": 521000000,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -24,9 +24,9 @@
         "name": "Stratis",
         "symbol": "STRAT",
         "rank": "22",
-        "balance": 605,
-        "alertMin": 0.0005,
-        "alertMax": 0.00065,
+        "balance": 60500,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -34,9 +34,9 @@
         "name": "Shift",
         "symbol": "SHIFT",
         "rank": "218",
-        "balance": 789,
-        "alertMin": 0.00015,
-        "alertMax": 0.0002,
+        "balance": 113963,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -44,9 +44,9 @@
         "name": "Vector",
         "symbol": "VEC2",
         "rank": "789",
-        "balance": 7007,
-        "alertMin": 4e-7,
-        "alertMax": 0.0000015,
+        "balance": 700700,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -54,19 +54,9 @@
         "name": "WeTrust",
         "symbol": "TRST",
         "rank": "116",
-        "balance": 810,
-        "alertMin": 0.000055,
-        "alertMax": 0.00007,
-        "favorite": true
-    },
-    {
-        "id": "wings",
-        "name": "Wings",
-        "symbol": "WINGS",
-        "rank": "100",
-        "balance": 89,
-        "alertMin": 0.000075,
-        "alertMax": 0.0001,
+        "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -74,19 +64,9 @@
         "name": "Humaniq",
         "symbol": "HMQ",
         "rank": "203",
-        "balance": 1820,
-        "alertMin": 0.000012,
-        "alertMax": 0.000015,
-        "favorite": true
-    },
-    {
-        "id": "aragon",
-        "name": "Aragon",
-        "symbol": "ANT",
-        "rank": "87",
-        "balance": 51,
-        "alertMin": 0.00028,
-        "alertMax": 0.00035,
+        "balance": 182025,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -95,8 +75,8 @@
         "symbol": "CVC",
         "rank": "54",
         "balance": 0,
-        "alertMin": 0.00006,
-        "alertMax": 0.00007,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -105,8 +85,8 @@
         "symbol": "ARK",
         "rank": "23",
         "balance": 0,
-        "alertMin": 0.00051,
-        "alertMax": 0.00054,
+        "alertMin": null,
+        "alertMax": null,
         "favorite": true
     },
     {
@@ -120,60 +100,10 @@
         "favorite": true
     },
     {
-        "id": "particl",
-        "name": "Particl",
-        "symbol": "PART",
-        "rank": "90",
-        "balance": 0,
-        "alertMin": 0.00115,
-        "alertMax": 0.0012,
-        "favorite": true
-    },
-    {
-        "id": "chronobank",
-        "name": "Chronobank",
-        "symbol": "TIME",
-        "rank": "180",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "qtum",
-        "name": "Qtum",
-        "symbol": "QTUM",
-        "rank": "13",
-        "balance": 0,
-        "alertMin": 0.0021,
-        "alertMax": 0.0022,
-        "favorite": true
-    },
-    {
         "id": "bancor",
         "name": "Bancor",
         "symbol": "BNT",
         "rank": "70",
-        "balance": 0,
-        "alertMin": 0.0003,
-        "alertMax": 0.0004,
-        "favorite": true
-    },
-    {
-        "id": "iota",
-        "name": "IOTA",
-        "symbol": "MIOTA",
-        "rank": "11",
-        "balance": 0,
-        "alertMin": 0.00007,
-        "alertMax": 0.00008,
-        "favorite": true
-    },
-    {
-        "id": "spectrecoin",
-        "name": "Spectrecoin",
-        "symbol": "XSPEC",
-        "rank": "250",
         "balance": 0,
         "alertMin": null,
         "alertMax": null,
@@ -215,6 +145,16 @@
         "symbol": "VIB",
         "rank": "166",
         "balance": 0,
+        "alertMin": null,
+        "alertMax": null,
+        "favorite": true
+    },
+    {
+        "id": "spectrecoin",
+        "name": "Spectrecoin",
+        "symbol": "XSPEC",
+        "rank": "264",
+        "balance": 2500,
         "alertMin": null,
         "alertMax": null,
         "favorite": true

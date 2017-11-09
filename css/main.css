@@ -1,16 +1,7 @@
-a:link {text-decoration: none;color:#000000;}
-a:visited {text-decoration: none;color:#000000;}
-a:active {text-decoration: none;color:#000000;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:active {text-decoration: none;}
 
-.red{
-	background-color: #ffe2e1  !important;
-}
-.green{
-	background-color: #e1ffe2  !important;
-}
-.white{
-	background-color: white !important;
-}
 
 hr{
 	height: 1px;
@@ -47,7 +38,7 @@ h4{
 
 .columnNumero{
 	padding-right: 0px;
-	padding-left: 5px !important;
+	padding-left: 2px !important;
 	color: #428bca;
 	font-size: 18px;
 	font-weight: bold;
@@ -140,7 +131,17 @@ h4{
 	margin: 8px;
 	padding: 4px;
 	width: 300px; 
+}
 
+.box{
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	margin: 8px;
+	padding: 4px;
+	width: 300px; 
+	height: 600px;
+	text-align: center;
 }
 
 .btnPannelCurrencie{
@@ -222,7 +223,7 @@ h4{
 
 
 
-/********************************************** chart/alerte ***********************************************/
+/********************************************** chart ***********************************************/
 
 #charts{
 	padding: 5px 5px 5px 5px;
@@ -303,6 +304,18 @@ body {
 
 }
 
+/********************************************** headerBloc ***********************************************/
+
+#containerIntro h1,
+#containerIntro p {
+    display: inline;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+	 color: #fffff9;
+}
+
 /********************************************** angular ***********************************************/
 
 .md-button {
@@ -318,4 +331,15 @@ body {
 
 input[type="file"] {
     display: none;
+}
+
+/********************************************** alertes ***********************************************/
+.red{
+	background-color: #FFF2F2  !important;
+}
+.green{
+	background-color: #EAFFEF  !important;
+}
+.white{
+	background-color: white !important;
 }

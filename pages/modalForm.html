@@ -1,0 +1,125 @@
+
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">{{selectedCurrencie.symbol}}</h4>
+		  </div>
+		  <div class="modal-body">
+			  
+
+				<form class="form-horizontal">
+						
+						<!-- price -->
+						<div class="form-group">
+							<label class="control-label col-sm-3 columnLeft" >Price</label>
+							<div class="col-sm-9 columnRight">
+
+								<div class="input-group"> 
+									<span class="input-group-addon"><i class="fa fa-btc"></i></span>
+										
+									<input 
+										type="number" 
+										class="form-control columnRight" 
+										id="price" 
+										value="{{ selectedCurrencie.price_btc | limitTo:12 }}"
+										disabled="true"
+										/>	
+								</div>
+									
+							</div>
+						</div>
+
+						<!-- BALANCE -->
+						<div class="form-group">
+						  <label class="control-label col-sm-3 columnLeft" for="balance">Balance</label>
+						  <div class="col-sm-9">
+								
+							<div class="input-group"> 
+								<span class="input-group-addon">{{selectedCurrencie.symbol}}</span>
+									
+								<input 
+									type="number" 
+									class="form-control columnRight" 
+									id="balance" 
+									placeholder="Number of {{selectedCurrencie.symbol}} you have ?"
+									ng-model="selectedCurrencie.balance"
+									ng-change="updateMyCryptoBalance(selectedCurrencie,'{{selectedCurrencie.balance}}')"/>
+							</div>
+
+						  </div>
+						</div>
+
+						<!-- Total -->
+						<div class="form-group">
+							<label class="control-label col-sm-3 columnLeft" >Total</label>
+							<div class="col-sm-9 columnRight">
+								<div class="input-group"> 
+									<span class="input-group-addon"><i class="fa fa-btc"></i></span>
+										
+									<input 
+										type="number" 
+										class="form-control columnRight" 
+										id="price" 
+										value="{{ (selectedCurrencie.price_btc * selectedCurrencie.balance)  }}"
+										disabled="true"
+										/>	
+								</div>
+	
+									 
+							</div>
+						</div>
+
+						<div class="form-group"><hr/></div>
+
+						<!-- ALERT MAX -->
+						<div class="form-group">
+								<label class="control-label col-sm-3 columnLeft" for="balance">AlertMax</label>
+								<div class="col-sm-9">
+									  
+								  <div class="input-group"> 
+									  <span class="input-group-addon"><i class="fa fa-btc"></i></span>
+										  
+									  <input 
+										  type="number" 
+										  class="form-control columnRight" 
+										  id="alertMax" 
+										  step="0.00000001"
+										  placeholder="{{ selectedCurrencie.price_btc | limitTo:12 }}"
+										  ng-model="selectedCurrencie.alertMax"
+										 />
+								  </div>
+	  
+								</div>
+							  </div>
+
+						<!-- ALERT MIN -->
+						<div class="form-group">
+								<label class="control-label col-sm-3 columnLeft" for="balance">AlertMin</label>
+								<div class="col-sm-9">
+									
+								<div class="input-group"> 
+									<span class="input-group-addon"><i class="fa fa-btc"></i></span>
+										
+									<input 
+										type="number" 
+										class="form-control columnRight" 
+										id="alertMin" 
+										step="0.00000001"
+										placeholder="{{ selectedCurrencie.price_btc | limitTo:12 }}"
+										ng-model="selectedCurrencie.alertMin"
+									/>
+								</div>
+
+		</div>
+	  </div>
+				</form>
+
+
+
+							  
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+		  </div>
+		</div>
+	  

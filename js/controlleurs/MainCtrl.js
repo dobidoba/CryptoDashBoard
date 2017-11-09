@@ -12,6 +12,9 @@ function MainCtrl(RequestService,CurrenciesService,StorageService,$scope,$http,$
 			CurrenciesService.updateCurrencies($scope,$http,$sce,$location,currencies);
 	
 			var currenciesFavorites = StorageService.loadCurrenciesFavorites();	
+			if (currenciesFavorites==null){
+				currenciesFavorites = CurrenciesService.getDefaultCurrenciesFavorites();
+			}
 			if (currenciesFavorites!=null){
 				CurrenciesService.updateCurrenciesFavorites($scope,$sce,currenciesFavorites);
 			}
@@ -27,14 +30,14 @@ function MainCtrl(RequestService,CurrenciesService,StorageService,$scope,$http,$
 	$scope.downloadCurrenciesFavorites = function () {
 		
 		$( "#saveCurrenciesFavorites" ).click(function( event ) {
-			var currenciesJson = StorageService.createExportCurrenciesFavorites($scope.currenciesFavorites);
+			var currenciesJson = StorageService.createExportCurrenciesFavorites(CurrenciesService.getCurrenciesFavorites());
 			this.href = 'data:plain/text,' + JSON.stringify(currenciesJson, null, 4);
 		});
 	};
 
 	$scope.showCurrenciesFavorites = function () {
-		
-		var currenciesJson = StorageService.createExportCurrenciesFavorites($scope.currenciesFavorites);
+		console.log($scope.currenciesFavorites);
+		var currenciesJson = StorageService.createExportCurrenciesFavorites(CurrenciesService.getCurrenciesFavorites());
 		
 		 var infoModal = $('#modalJson');
 		 infoModal.find('.modal-body').html('<pre><code>'+JSON.stringify(currenciesJson, null, 4)+'</pre></code>');
@@ -42,13 +45,18 @@ function MainCtrl(RequestService,CurrenciesService,StorageService,$scope,$http,$
 	
 	
 	$scope.LoadFileData = function(files) {
-		$scope.files = files;
-		console.log(files[0]);
-		var reader = new FileReader();
-        reader.onload = onReaderLoad;
-        reader.readAsText(files[0]);
 		
-		this.showCurrenciesFavorites();
+		bootbox.confirm("Update your favorite currencies ?", function(result){ 
+			if (result){
+				$scope.files = files;
+				console.log(files[0]);
+				var reader = new FileReader();
+				reader.onload = onReaderLoad;
+				reader.readAsText(files[0]);
+				
+				bootbox.alert("Currencies updated");
+			}
+		});
 	};
 	
 	function onReaderLoad(event){

@@ -101,74 +101,12 @@
 		&nbsp;<!-- necessaire -->
 		</div>
 	
+		
 		  <!-- Modal -->
 		  <div class="modal fade" id="myModal" role="dialog">
-			<div class="modal-dialog modal-sm">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h4 class="modal-title">{{selectedCurrencie.symbol}}</h4>
-				</div>
-				<div class="row modal-body">
-					<div class="col-xs-12"><h4>Investment</h4></div>
-					
-					<div class="col-xs-3 columnLeft">Price</div>
-					<div class="col-xs-6 columnRight">	
-						{{ selectedCurrencie.price_btc | limitTo:12 }} 
+					<div class="modal-dialog modal-sm">
+							<div ng-include="'./pages/modalForm.html'"></div>
 					</div>
-					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
-					
-					<div class="col-xs-3 columnLeft">Number</div>
-					<div class="col-xs-6 columnRight">
-						<input 	type="number"
-									class="columnRight"
-									style="width: 120px; height: 20px;" ng-model="selectedCurrencie.balance" 
-									ng-change="updateMyCryptoBalance(selectedCurrencie,'{{selectedCurrencie.balance}}')">
-					</div>
-					<div class="col-xs-3 columnLeft">{{selectedCurrencie.symbol}}</div>
-					
-					<div class="col-xs-3 columnLeft">Total</div>
-					<div class="col-xs-6 columnRight">	
-						{{ selectedCurrencie.price_btc * selectedCurrencie.balance | limitTo:12 }}
-					</div>
-					<div class="col-xs-3 columnLeft"><i class="fa fa-btc"></i></div>
-					
-					<div class="col-xs-9 columnRight">	
-						{{ selectedCurrencie.price_btc * selectedCurrencie.balance | limitTo:12 }}
-					</div>
-					<div class="col-xs-3 columnLeft"><i class="fa fa-usd"></i></div>
-					
-					<div class="col-xs-12"><hr/></div>
-					
-					<div class="col-xs-12"><h4>Alert</h4></div>
-					
-					<div class="col-xs-3 columnLeft"></div>
-					<div class="col-xs-6 columnLeft">	
-						<input 	type="number" 
-								step="0.00000001"
-								class="columnRight" 
-								style="width: 130px; height: 20px;" ng-model="selectedCurrencie.alertMax" 
-								>
-					</div>
-					<div class="col-xs-3 columnLeft">MAX</div>
-					
-					
-					<div class="col-xs-3 columnLeft"></div>
-					<div class="col-xs-6 columnLeft">	
-						<input 	type="number" 
-								step="0.00000001"
-								class="columnRight" 
-								style="width: 130px; height: 20px;" ng-model="selectedCurrencie.alertMin" 
-								>
-					</div>
-					<div class="col-xs-3 columnLeft">MIN</div>
-									
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-				</div>
-			  </div>
-			</div>
 		  </div>
 		  
 		  <!-- Modal Delete -->

@@ -15,6 +15,9 @@ app.service('CurrenciesService', function(StorageService) {
 	this.getCurrenciesFavorites = function() {
 		return appData.currenciesFavorites;
 	}
+	this.getDefaultCurrenciesFavorites = function() {
+		return [{"id":"bitcoin","name":"Bitcoin","symbol":"BTC","rank":"1","price_usd":"5921.01","price_btc":"1.0","24h_volume_usd":"1852660000.0","market_cap_usd":98531154386,"available_supply":"16640937.0","total_supply":"16640937.0","percent_change_1h":"-0.7","percent_change_24h":"0.11","percent_change_7d":"4.88","last_updated":"1508743150","png":{},"png16":{},"png32":{},"$$hashKey":"object:34","balance":0,"alertMin":null,"alertMax":null,"favorite":true,"valueDollars":0,"valueBtc":0},{"id":"ethereum","name":"Ethereum","symbol":"ETH","rank":"2","price_usd":"289.19","price_btc":"0.0491174","24h_volume_usd":"306181000.0","market_cap_usd":27550613089,"available_supply":"95268208.0","total_supply":"95268208.0","percent_change_1h":"-0.5","percent_change_24h":"-2.62","percent_change_7d":"-15.34","last_updated":"1508743160","png":{},"png16":{},"png32":{},"$$hashKey":"object:35","balance":0,"alertMin":null,"alertMax":null,"favorite":true,"valueDollars":0,"valueBtc":0}];
+	}
 	
 // ##############################################################################
 /* ##### PUBLIC */
