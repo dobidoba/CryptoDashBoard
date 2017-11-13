@@ -1,24 +1,18 @@
 	
-			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+			<div class="currencieDetail currencieDetailLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 				
 					<div class="row">
-						<div class="col-xs-6">
-							<div id="containerIntro">
-								<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png" title="Bitcoin" src="https://files.coinmarketcap.com/static/img/coins/64x64/bitcoin.png">
-								<h1>Bitcoin</h1>
-							</div>
-						</div>
-						<div class="col-xs-6 text-right">
-							<div class="huge">{{ btcPrice | setDecimal:2 }} <i class="fa fa-usd fa"></i></div>
+						<div class="col-xs-12">
+							<div class="huge">My investment</div>
 						</div>
 						<div class="col-xs-12"><hr/></div>
 						<div class="col-xs-3">
 							<i class="fa fa-money fa-2x"></i>
 						</div>
-						<div class="col-xs-9 text-right">
+						<div class="col-xs-9 text-right huge">
 							{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i>
 							<br/>
-							<span class="fontSmall">({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)</span>
+							({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)
 						</div>
 						<div class="col-xs-12"><hr/></div>
 						<div class="col-xs-3">

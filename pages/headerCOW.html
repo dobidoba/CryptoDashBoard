@@ -1,31 +1,60 @@
 	
-			<div class="container currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+	<div class="currencieDetail gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+			<div class="currencieDetailLook">
 				
 					<div class="row">
-						<div class="col-xs-12">Coin of the week</div>
-						<div class="col-xs-12"><hr/></div>
-						<div class="col-xs-2">
+						<div class="col-xs-4">
 							<div id="containerIntro">
-								<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/espers.png" title="Bitcoin" src="https://files.coinmarketcap.com/static/img/coins/64x64/bitcoin.png">
-								
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'BTC').id }}/" 
+									target="_blank" 
+									title="coinmarketcap : {{ getCurrencie(currencies,'BTC').symbol | uppercase}}">
+										<img ng-src="https://files.coinmarketcap.com/static/img/coins/64x64/bitcoin.png"/>
+									</a>
 							</div>
 						</div>
-						<div class="col-xs-5">
+						<div class="col-xs-8">
 							<div class="symbolName">
-									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'BTC').id }}/" 
 									target="_blank" 
-									title="coinmarketcap : {{ currencie.symbol | uppercase}}">
-										{{ getCurrencie(currenciesFavorites,'ESP').symbol }} 
-										({{ getCurrencie(currenciesFavorites,'ESP').name }})
+									title="coinmarketcap : {{ getCurrencie(currencies,'BTC').symbol | uppercase}}">
+										{{ getCurrencie(currencies,'BTC').symbol }} 
+										({{ getCurrencie(currencies,'BTC').name }})
 									</a>
 								</div>
+								<div class="huge">{{ btcPrice | setDecimal:2 }} <i class="fa fa-usd fa"></i></div>
+								<div ng-style="{ 'color': getCurrencie(currencies,'BTC').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'BTC').percent_change_24h }} %</div>	
 						</div>
-						<div class="col-xs-5 text-right">
-							<div >{{ getCurrencie(currenciesFavorites,'ESP').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
-							<div ng-style="{ 'color': getCurrencie(currenciesFavorites,'ESP').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currenciesFavorites,'ESP').percent_change_24h }} %</div>
-						</div>
-						
 					</div>
 				
 			</div>
+			
+			<div class="currencieDetailLook">
+				
+					<div class="row">
+						<div class="col-xs-4">
+							<div id="containerIntro">
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'VEC2').id }}/" 
+									target="_blank" 
+									title="coinmarketcap : {{ getCurrencie(currencies,'VEC2').symbol | uppercase}}">
+										<img ng-src="https://files.coinmarketcap.com/static/img/coins/64x64/vector.png"/>
+									</a>
+							</div>
+						</div>
+						<div class="col-xs-8">
+								Coin of the week
+							<div class="symbolName">
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'VEC2').id }}/" 
+									target="_blank" 
+									title="coinmarketcap : {{ getCurrencie(currencies,'VEC2').symbol | uppercase}}">
+										{{ getCurrencie(currencies,'VEC2').symbol }} 
+										({{ getCurrencie(currencies,'VEC2').name }})
+									</a>
+								</div>
+								<div >{{ getCurrencie(currencies,'VEC2').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
+								<div ng-style="{ 'color': getCurrencie(currencies,'VEC2').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'VEC2').percent_change_24h }} %</div>	
+						</div>
+					</div>
+				
+			</div>
+	</div>			
 	

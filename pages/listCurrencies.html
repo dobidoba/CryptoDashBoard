@@ -7,7 +7,7 @@
 
 		<div ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
 			
-			<div 	class="container currencieDetail hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" 
+			<div 	class="currencieDetail currencieDetailLook hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" 
 					ng-class="(currencie.alertMin!=null && currencie.alertMin > currencie.price_btc)?'red':(currencie.alertMax!=null && currencie.alertMax < currencie.price_btc)?'green':'white'">
 					
 					<div class="col-xs-3 logo" >
