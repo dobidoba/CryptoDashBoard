@@ -84,19 +84,23 @@
 						</div>						
 						
 					</div>
-					
-					<div class="detail">
-									
-						<div class="col-xs-12 "><hr/></div>
-										
-						<div class="col-xs-5 label columnLeft">MarketCap :</div>
-						<div class="col-xs-7 value">{{ currencie.market_cap_usd | number:3 }} <i class="fa fa-usd"></i></div>
+
+					<div class="col-xs-12 "><hr/></div>
+
+					<div id="infoMarket" class="detail">
 						
-						<div class="col-xs-5 label columnLeft">Change 24h :</div>
-						<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }">{{ currencie.percent_change_24h }} %</div>
-						
-						<div class="col-xs-5 label columnLeft">Change 7d :</div>
-						<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_7d < 0 ? 'red' : 'green' }">{{ currencie.percent_change_7d }} %</div>
+						<div class="row">
+							<div class="col-xs-5 label columnLeft">MarketCap :</div>
+							<div class="col-xs-7 value">{{ currencie.market_cap_usd | number:3 }} <i class="fa fa-usd"></i></div>
+						</div>
+						<div class="row">
+							<div class="col-xs-5 label columnLeft">Change 24h :</div>
+							<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }">{{ currencie.percent_change_24h }} %</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-5 label columnLeft">Change 7d :</div>
+							<div class="col-xs-7 value" ng-style="{ 'color': currencie.percent_change_7d < 0 ? 'red' : 'green' }">{{ currencie.percent_change_7d }} %</div>
+						</div>
 					</div>
 			</div>	
 			

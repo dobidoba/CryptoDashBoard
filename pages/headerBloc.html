@@ -2,28 +2,23 @@
 			<div class="currencieDetail currencieDetailLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 				
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-7 verticalHR">
 							<div class="huge">My investment</div>
+							<div class="text-right">
+								{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i>
+								<br/>
+								({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)
+							</div>
 						</div>
-						<div class="col-xs-12"><hr/></div>
-						<div class="col-xs-3">
-							<i class="fa fa-money fa-2x"></i>
-						</div>
-						<div class="col-xs-9 text-right huge">
-							{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i>
+						<div class="col-xs-5">
 							<br/>
-							({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)
-						</div>
-						<div class="col-xs-12"><hr/></div>
-						<div class="col-xs-3">
-							
-						</div>
-						<div class="col-xs-9 text-right">
-							<div class="huge"></div>
-							<div >{{}}</div>
+							<div class="col-xs-7 label columnLeft">Invested</div><div class="col-xs-5 value text-right" >XXX</div>
+							<div class="col-xs-7 label columnLeft">Watched</div><div class="col-xs-5 value text-right">XXX</div>
+							<div class="col-xs-7 label columnLeft">Alerts</div><div class="col-xs-5 value text-right">XXX</div>
 						</div>
 						
 						<div class="col-xs-12"><hr/></div>
+
 						<div class="col-xs-12 xsCenter">
 						
 							  <ui-select ng-model="currentCrypto.selected" theme="select2" ng-disabled="disabled" style="min-width: 250px;">
