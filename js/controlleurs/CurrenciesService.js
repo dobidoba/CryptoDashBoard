@@ -5,10 +5,19 @@ app.service('CurrenciesService', function(StorageService) {
 		currenciesAll: [],
 		currenciesFavorites: [],
 		totalBtcValue: 0,
+		nbInvested: 0,
+		nbWatched: 0,
 		btcPrice: 0,
 		userData: null
 	};
-		
+	
+	
+	this.getNbInvested = function() {
+		return appData.nbInvested;
+	}
+	this.getNbWatched = function() {
+		return appData.nbWatched;
+	}
 	this.getTotalBtcValue = function() {
 		return appData.totalBtcValue;
 	}
@@ -46,6 +55,20 @@ app.service('CurrenciesService', function(StorageService) {
 		
 	};
 
+	this.infoCurrencies = function() {
+		appData.nbInvested = 0;
+		appData.nbWatched = 0;
+
+		angular.forEach(appData.currenciesFavorites,
+			function(currencie){
+				if (currencie.balance>0){
+					appData.nbInvested = appData.nbInvested + 1;
+				}else{
+					appData.nbWatched = appData.nbWatched + 1;
+				}
+			});
+	}
+
 	this.updateCurrenciesFavorites = function($scope,$sce,currenciesFavorites) {
 		console.log("CurrenciesCtrl.updateCurrenciesFavorites()");
 
@@ -72,6 +95,8 @@ app.service('CurrenciesService', function(StorageService) {
 		addCurrencie($sce,currencieFavorite);
 		
 		// MAJ SCOPE
+		$scope.nbInvested = appData.nbInvested;
+		$scope.nbWatched = appData.nbWatched;
 		$scope.totalBtcValue = appData.totalBtcValue;
 		$scope.currenciesFavorites = appData.currenciesFavorites;
 		
@@ -141,7 +166,7 @@ app.service('CurrenciesService', function(StorageService) {
 
 		if (myCryptoFav==null){	
 			myCrypto.balance = parseInt(currencie.balance);
-
+			
 			if (currencie.alertMin) {
 				myCrypto.alertMin = parseFloat(currencie.alertMin);
 			}else{
