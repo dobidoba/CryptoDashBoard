@@ -44,7 +44,6 @@
 				<div id="navBarBtn" class="navbar-brand xsCenter">
 					<ul class="nav btn nav-pills">
 						<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
-						<li><a data-toggle="tab" href="#chartsTab" class="btn btn-default navbar-btn"> <i class="fa fa-bar-chart fa-fw"></i></a></li>
 						<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
 						<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
 					</ul>
@@ -61,10 +60,6 @@
 					<div ng-include="'./pages/listCurrencies.html'"></div>
 			</div>
 		
-			<div id="chartsTab" class="tab-pane fade">
-				<div ng-include="'./pages/charts.html'"></div>
-			</div>
-	
 			<div id="helpTab" class="tab-pane fade">
 				<div ng-include="'./pages/help.html'"></div>
 			</div>
@@ -82,7 +77,6 @@
 			<div id="navBarBtn" class="navbar-brand xsCenter">
 				<ul class="nav btn nav-pills">
 					<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
-					<li><a data-toggle="tab" href="#chartsTab" class="btn btn-default navbar-btn"> <i class="fa fa-bar-chart fa-fw"></i></a></li>
 					<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
 					<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
 				</ul>
@@ -106,17 +100,14 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
 	
-	<!-- chart -->
-	<script src="./js/fusioncharts/js/fusioncharts.js"></script>
-	<script type="text/javascript" src="./js/fusioncharts/js/themes/fusioncharts.theme.zune.js"></script>
-	
 	<!-- Angular and adds-->
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
 	 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
-	<script src="./js/fusioncharts/js/angular-fusioncharts.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
 	<script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+	
 	<!-- infinite scroll file -->
 	<script src="./js/infinite-scroll.js"></script>
 	<script src="./js/bootbox.min.js"></script>
@@ -127,7 +118,7 @@
 	<script src="./js/MyCryptoFilters.js"></script>
 	<script src="./js/controlleurs/MainCtrl.js"></script>
 	<script src="./js/controlleurs/ListCurrenciesCtrl.js"></script>
-	<script src="./js/controlleurs/FusionChartsCtrl.js"></script>
+	<!--<script src="./js/controlleurs/ChartsCtrl.js"></script>-->
 	<script src="./js/controlleurs/StorageService.js"></script>
 	<script src="./js/controlleurs/RequestService.js"></script>
 	<script src="./js/controlleurs/CurrenciesService.js"></script>

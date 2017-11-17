@@ -1,4 +1,4 @@
-var app = angular.module('MyCryptoApp', ['ui.select', 'ngSanitize', 'infinite-scroll', 'ng-fusioncharts', 'ngStorage', 'ngRoute']);
+var app = angular.module('MyCryptoApp', ['ui.select', 'ngSanitize', 'infinite-scroll', 'ngStorage', 'ngRoute']);
 
 app.config(function ($routeProvider) {
 	

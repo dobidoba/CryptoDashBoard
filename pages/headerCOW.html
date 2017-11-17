@@ -33,25 +33,25 @@
 					<div class="row">
 						<div class="col-xs-4">
 							<div id="containerIntro">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'VEC2').id }}/" 
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'ESP').id }}/" 
 									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'VEC2').symbol | uppercase}}">
-										<img ng-src="https://files.coinmarketcap.com/static/img/coins/64x64/vector.png"/>
+									title="coinmarketcap : {{ getCurrencie(currencies,'ESP').symbol | uppercase}}">
+										<img ng-src="https://files.coinmarketcap.com/static/img/coins/64x64/espers.png"/>
 									</a>
 							</div>
 						</div>
 						<div class="col-xs-8">
 								Coin of the week
 							<div class="symbolName">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'VEC2').id }}/" 
+									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'ESP').id }}/" 
 									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'VEC2').symbol | uppercase}}">
-										{{ getCurrencie(currencies,'VEC2').symbol }} 
-										({{ getCurrencie(currencies,'VEC2').name }})
+									title="coinmarketcap : {{ getCurrencie(currencies,'ESP').symbol | uppercase}}">
+										{{ getCurrencie(currencies,'ESP').symbol }} 
+										({{ getCurrencie(currencies,'ESP').name }})
 									</a>
 								</div>
-								<div >{{ getCurrencie(currencies,'VEC2').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
-								<div ng-style="{ 'color': getCurrencie(currencies,'VEC2').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'VEC2').percent_change_24h }} %</div>	
+								<div >{{ getCurrencie(currencies,'ESP').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
+								<div ng-style="{ 'color': getCurrencie(currencies,'ESP').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'ESP').percent_change_24h }} %</div>	
 						</div>
 					</div>
 				
