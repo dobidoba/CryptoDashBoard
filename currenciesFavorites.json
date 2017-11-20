@@ -1,162 +1,182 @@
 [
-    {
-        "id": "bitcoin",
-        "name": "Bitcoin",
-        "symbol": "BTC",
-        "rank": "1",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "espers",
-        "name": "Espers",
-        "symbol": "ESP",
-        "rank": "349",
-        "balance": 521000000,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "stratis",
-        "name": "Stratis",
-        "symbol": "STRAT",
-        "rank": "22",
-        "balance": 60500,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "shift",
-        "name": "Shift",
-        "symbol": "SHIFT",
-        "rank": "218",
-        "balance": 113963,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "vector",
-        "name": "Vector",
-        "symbol": "VEC2",
-        "rank": "789",
-        "balance": 700700,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "trust",
-        "name": "WeTrust",
-        "symbol": "TRST",
-        "rank": "116",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "humaniq",
-        "name": "Humaniq",
-        "symbol": "HMQ",
-        "rank": "203",
-        "balance": 182025,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "civic",
-        "name": "Civic",
-        "symbol": "CVC",
-        "rank": "54",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "ark",
-        "name": "Ark",
-        "symbol": "ARK",
-        "rank": "23",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "elastic",
-        "name": "Elastic",
-        "symbol": "XEL",
-        "rank": "123",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "bancor",
-        "name": "Bancor",
-        "symbol": "BNT",
-        "rank": "70",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "decent",
-        "name": "DECENT",
-        "symbol": "DCT",
-        "rank": "133",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "opus",
-        "name": "Opus",
-        "symbol": "OPT",
-        "rank": "363",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "voisecom",
-        "name": "Voise",
-        "symbol": "VOISE",
-        "rank": "216",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "viberate",
-        "name": "Viberate",
-        "symbol": "VIB",
-        "rank": "166",
-        "balance": 0,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    },
-    {
-        "id": "spectrecoin",
-        "name": "Spectrecoin",
-        "symbol": "XSPEC",
-        "rank": "264",
-        "balance": 2500,
-        "alertMin": null,
-        "alertMax": null,
-        "favorite": true
-    }
+{
+"id":"espers",
+"name":"Espers",
+"symbol":"ESP",
+"rank":"452",
+"balance":521000000,
+"alertMin":1e-8,
+"alertMax":2e-8,
+"favorite":true
+},
+{
+"id":"stratis",
+"name":"Stratis",
+"symbol":"STRAT",
+"rank":"24",
+"balance":60500,
+"alertMin":0.00045,
+"alertMax":0.00055,
+"favorite":true
+},
+{
+"id":"shift",
+"name":"Shift",
+"symbol":"SHIFT",
+"rank":"198",
+"balance":113963,
+"alertMin":0.00015,
+"alertMax":0.0002,
+"favorite":true
+},
+{
+"id":"vector",
+"name":"VectorAI",
+"symbol":"VEC2",
+"rank":"880",
+"balance":197000,
+"alertMin":3e-7,
+"alertMax":5.5e-7,
+"favorite":true
+},
+{
+"id":"trust",
+"name":"WeTrust",
+"symbol":"TRST",
+"rank":"160",
+"balance":0,
+"alertMin":0.00003,
+"alertMax":0.000045,
+"favorite":true
+},
+{
+"id":"humaniq",
+"name":"Humaniq",
+"symbol":"HMQ",
+"rank":"199",
+"balance":182025,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"civic",
+"name":"Civic",
+"symbol":"CVC",
+"rank":"54",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"ark",
+"name":"Ark",
+"symbol":"ARK",
+"rank":"25",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"elastic",
+"name":"Elastic",
+"symbol":"XEL",
+"rank":"162",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"bancor",
+"name":"Bancor",
+"symbol":"BNT",
+"rank":"69",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"decent",
+"name":"DECENT",
+"symbol":"DCT",
+"rank":"156",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"opus",
+"name":"Opus",
+"symbol":"OPT",
+"rank":"414",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"voisecom",
+"name":"Voise",
+"symbol":"VOISE",
+"rank":"308",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"viberate",
+"name":"Viberate",
+"symbol":"VIB",
+"rank":"179",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"spectrecoin",
+"name":"Spectrecoin",
+"symbol":"XSPEC",
+"rank":"286",
+"balance":4030,
+"alertMin":0.000048,
+"alertMax":0.00006,
+"favorite":true
+},
+{
+"id":"blackcoin",
+"name":"BlackCoin",
+"symbol":"BLK",
+"rank":"180",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+},
+{
+"id":"ardor",
+"name":"Ardor",
+"symbol":"ARDR",
+"rank":"28",
+"balance":0,
+"alertMin":0.000027,
+"alertMax":0.000036,
+"favorite":true
+},
+{
+"id":"vertcoin",
+"name":"Vertcoin",
+"symbol":"VTC",
+"rank":"40",
+"balance":0,
+"alertMin":null,
+"alertMax":null,
+"favorite":true
+}
 ]

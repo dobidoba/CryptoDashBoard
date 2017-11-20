@@ -4,9 +4,6 @@ ChartsCtrl.$inject = ['CurrenciesService','$scope'];
 
 function ChartsCtrl(CurrenciesService,$scope) {
 	
-
-	
-
    // ##############################################################################
   /* ##### WATCH */
 	
@@ -43,23 +40,32 @@ function ChartsCtrl(CurrenciesService,$scope) {
 // ##############################################################################
 	
 	function investChart($scope) {
-		console.log(myCryptoCurrencies);
+		
 
 		if (myCryptoCurrencies){
-			data = new Array(myCryptoCurrencies.length);
+			
+			$scope.options = {
+				title: {
+					display: true,
+					text: 'My investment distribution (%)'
+				}
+			}
+
+			$scope.labels = [];
+			$scope.data = [];
 			i=0;
 			angular.forEach(myCryptoCurrencies,
 				function(myCrypto){
 					if (myCrypto.balance>0){
 						
 						pourcent=myCrypto.valueBtc/$scope.totalBtcValue*100;
-						data[i++] = { pourcent};
+						$scope.labels[i] = myCrypto.name;
+						$scope.data[i] = pourcent.toFixedDown(2);
+						i=i+1;
 					}
 					
 				}
 			);
-			$scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-			$scope.data = data;
 		}
 
 		
@@ -68,3 +74,11 @@ function ChartsCtrl(CurrenciesService,$scope) {
 	
 	
 };
+
+
+Number.prototype.toFixedDown = function(digits) {
+    var re = new RegExp("(\\d+\\.\\d{" + digits + "})(\\d)"),
+        m = this.toString().match(re);
+    return m ? parseFloat(m[1]) : this.valueOf();
+};
+	
