@@ -14,17 +14,11 @@ function ChartsCtrl(CurrenciesService,$scope) {
 		}
     });
 	
-	
-  // ##############################################################################
-  /* ##### INIT */
-	
-	
 	// ##first update
 	$scope.updateAllChart = function(){
 			console.log("ChartsCtrl.updateAllChart()");
 			updateChart($scope);		
 	}
-	$scope.updateAllChart();
 	
 	
   // ##############################################################################
@@ -48,6 +42,13 @@ function ChartsCtrl(CurrenciesService,$scope) {
 				title: {
 					display: true,
 					text: 'My investment distribution (%)'
+				},
+				legend: {
+					display: true,
+					position: 'left',
+					labels: {
+						fontColor: 'black'
+					}
 				}
 			}
 

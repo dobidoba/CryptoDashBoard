@@ -135,18 +135,23 @@ h4{
 	margin-right: 15px !important;
 }
 
-.currencieDetail{
+.blocCurrencie{
 	width: 300px; 
 	height: 220px;
 }
 
-.currencieDetailSmall{
+.blocGraph{
+	width: 600px; 
+	height: 220px;	
+}
+
+.blocSmall{
 	width: 300px; 
 	height: 106px;
 	padding-top: 15px !important;
 }
 
-.currencieDetailLook{
+.blocLook{
 	margin: 8px;
 	padding: 6px;
 	background-color: white;
