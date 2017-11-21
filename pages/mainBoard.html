@@ -1,0 +1,27 @@
+<div ng-controller="ListCurrenciesCtrl">
+	
+	<script type="text/javascript">
+		$(function(){
+			$('legend').click(function(){
+				$(this).parent().find('.content').slideToggle("slow");
+			});
+		});
+	</script>
+
+	<div class="divCenter row">
+	
+		<div ng-include="'./pages/headerBloc.html'"></div>
+		<div ng-include="'./pages/headerCOW.html'"></div>
+
+		<fieldset class="col col-xs-12">
+			<legend> Charts view </legend>
+			<div class="content" ng-include="'./pages/charts.html'"></div>
+		</fieldset>
+
+		<fieldset class="col col-xs-12">
+			<legend> Cards view </legend>
+		<div class="content" ng-include="'./pages/listCurrencies.html'"></div>
+		</fieldset>
+
+	</div>
+</div>	
