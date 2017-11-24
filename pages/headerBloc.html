@@ -2,26 +2,11 @@
 			<div class="blocCurrencie blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 				
 					<div class="row">
-						<div class="col-xs-12">
-							<img ng-src="./img/title.png"  >
+						<div class="col-xs-12 columnCenter">
+							<img id="title" ng-src="./img/title.png">
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-7 verticalHR">
-							<div class="huge">My investment</div>
-							<div class="text-right">
-								{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i>
-								<br/>
-								({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)
-							</div>
-						</div>
-						<div class="col-xs-5">
-							<br/>
-							<div class="col-xs-7 label columnLeft">Invested</div><div class="col-xs-5 value text-right" >{{getNbInvested()}}</div>
-							<div class="col-xs-7 label columnLeft">Watched</div><div class="col-xs-5 value text-right">{{getNbWatched()}}</div>
-							<br/>
-							<!--<div class="col-xs-7 label columnLeft">Alerts</div><div class="col-xs-5 value text-right">XXX</div>-->
-						</div>
 						
 						<div class="col-xs-12"><hr/></div>
 

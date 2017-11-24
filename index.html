@@ -35,60 +35,12 @@
 
     <div id="wrapper">
 	
-		<!-- NAVIGATION -->
-		<nav class="navbar navbar-default hidden-before-450" role="navigation" style="margin-bottom: 0">
-			<div id="navBar" class="navbar-static-top">
-				<div class="navbar-brand xsCenter">
-					Crypto Dashboard
-				</div>	
-				<div id="navBarBtn" class="navbar-brand xsCenter">
-					<ul class="nav btn nav-pills">
-						<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
-						<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
-						<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
-					</ul>
-				</div>
-				
-			</div>
-		</nav>
-
-		
-		<!-- WRAPPER -->
-        <div id="page-wrapper" class="tab-content">
-         
+        <div id="page-wrapper" class="tab-content">     
 			<div id="generalTab" class="tab-pane fade in active">
 					<div ng-include="'./pages/mainBoard.html'"></div>
 			</div>
-		
-			<div id="helpTab" class="tab-pane fade">
-				<div ng-include="'./pages/help.html'"></div>
-			</div>
-	
-			<div id="copyrightTab" class="tab-pane fade">
-				<div ng-include="'./pages/copyright.html'"></div>
-			</div>
-			
         </div>
-        
-		
-		<!-- NAVIGATION -->
-		<div id="footer" class="footer hidden-after-451">
-
-			<div id="navBarBtn" class="navbar-brand xsCenter">
-				<ul class="nav btn nav-pills">
-					<li class="active"><a data-toggle="tab" href="#generalTab" class="btn btn-default navbar-btn"><i class="fa fa-th-list fa-fw"></i></a></li>
-					<li><a data-toggle="tab" href="#helpTab" class="btn btn-default navbar-btn"> <i class="fa fa-question fa-fw"></i></a></li>
-					<li><a data-toggle="tab" href="#copyrightTab" class="btn btn-default navbar-btn"> <i class="fa fa-user fa-fw"></i></a></li>
-				</ul>
-			</div>
-		
-		</div>
-		
     </div>
-    <!-- /#wrapper -->
-	
-
-	
 	
     <!-- jQuery -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
