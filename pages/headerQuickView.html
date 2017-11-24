@@ -23,7 +23,14 @@
 			<div id="quickViewScroll" class="col-xs-12">
 				<div   ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
 						<div class="row">
-								<div class="col-xs-3">{{ currencie.symbol }} </div>
+								<div class="col-xs-3" style="white-space: nowrap;">
+									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+										target="_blank" 
+										title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+										<img ng-src="{{ currencie.png16 }}"  title="{{ currencie.name }}"> 
+									</a>
+									{{ currencie.symbol }}
+								</div>
 								<div class="col-xs-6">
 										{{ currencie.price_btc | limitTo:12 }}
 										<br/>

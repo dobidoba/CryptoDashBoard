@@ -3,7 +3,7 @@
 	<script type="text/javascript">
 		$(function(){
 			$('legend').click(function(){
-				$(this).parent().find('.fieldsetToggler').slideToggle("slow");
+				$(this).parent().find('.fieldsetToggler').slideToggle("400");
 			});
 		});
 	</script>
@@ -13,6 +13,11 @@
 		<div ng-include="'./pages/headerBloc.html'"></div>
 		<div ng-include="'./pages/headerCOW.html'"></div>
 		<div ng-include="'./pages/headerQuickView.html'"></div>
+
+		<fieldset class="col col-xs-12">
+			<legend ng-click="isHidden = !isHidden;"> <span class="glyphicon" ng-class="isHidden ? 'glyphicon-chevron-down' : 'glyphicon-chevron-up'"></span> Pinned view </legend>
+			<div class="fieldsetToggler" ng-include="'./pages/pinned.html'"></div>
+		</fieldset>
 
 		<fieldset class="col col-xs-12">
 			<legend> Charts view </legend>
