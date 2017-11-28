@@ -2,27 +2,28 @@
 <div id="quickView" class="blocCurrencie blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 		
 		<div class="row">
-			<div class="col-xs-7 verticalHR">
-				<div class="huge">My investment</div>
-				<div class="text-right">
-					{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i>
-					<br/>
-					({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)
-				</div>
+
+			<div class="col-xs-12 symbolName columnCenter">QuickView</div>
+
+			<div class="col-xs-12 columnCenter">
+					<div class="col-xs-3" style="white-space: nowrap;">
+						
+					</div>
+					<div class="col-xs-6">
+						Price
+					</div>
+					<div class="col-xs-3">
+							<i class="fa fa-btc fa"></i>
+					</div>
 			</div>
-			<div class="col-xs-5">
-				<br/>
-				<div class="col-xs-7 label columnLeft">Invested</div><div class="col-xs-5 value text-right" >{{getNbInvested()}}</div>
-				<div class="col-xs-7 label columnLeft">Watched</div><div class="col-xs-5 value text-right">{{getNbWatched()}}</div>
-				<br/>
-				<!--<div class="col-xs-7 label columnLeft">Alerts</div><div class="col-xs-5 value text-right">XXX</div>-->
-			</div>
-			
-			<div class="col-xs-12"><hr/></div>
 
 			<div id="quickViewScroll" class="col-xs-12">
+
 				<div   ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
-						<div class="row">
+						
+						<div class="col-xs-12 hrMargin"><hr/></div>
+						
+						<div class="row columnCenter">
 								<div class="col-xs-3" style="white-space: nowrap;">
 									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
 										target="_blank" 

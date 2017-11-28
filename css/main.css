@@ -18,7 +18,7 @@ h4{
 	padding: 2px 2px 2px 0px;
 }
 
-.hrMargin hr{
+. hr{
 	margin: 5px -19px 5px -19px;
 }
 
@@ -136,16 +136,44 @@ h4{
 	display:none;
 }
 
+/********************************************** bloc ***********************************************/
+
+.blocCurrencie{
+	width: 300px; 
+	height: 220px;
+}
+
+.blocGraph{
+	width: 600px; 
+	height: 220px;	
+}
+
+.blocSmall{
+	width: 300px; 
+	height: 70px;
+	padding-top: 3px !important;
+}
+
+.blocLook{
+	margin: 8px;
+	padding: 6px;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+
 /********************************************** quickview ***********************************************/
 
 #quickView{
-	font-size: 12px;
+	
 }
 
 #quickViewScroll{
 	overflow-y: scroll; 
 	width: 300px;
-	height:120px;
+	height: 172px;
+	font-size: 12px;
 }
 
 
@@ -168,30 +196,6 @@ h4{
 	width: 300px; 
 	padding: 0px !important;
 	margin-right: 15px !important;
-}
-
-.blocCurrencie{
-	width: 300px; 
-	height: 220px;
-}
-
-.blocGraph{
-	width: 600px; 
-	height: 220px;	
-}
-
-.blocSmall{
-	width: 300px; 
-	height: 106px;
-	padding-top: 15px !important;
-}
-
-.blocLook{
-	margin: 8px;
-	padding: 6px;
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 8px;
 }
 
 .box{
