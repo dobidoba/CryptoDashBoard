@@ -1,4 +1,4 @@
-<div ng-controller="ListCurrenciesCtrl">
+<div id="mainBoard"  ng-controller="ListCurrenciesCtrl">
 	
 	<script type="text/javascript">
 		$(function(){
@@ -20,30 +20,31 @@
 			<div class="fieldsetToggler" ng-include="'./pages/pinned.html'"></div>
 		</fieldset>
 		-->
-			<fieldset-toggler titre='TOTO' >
-				<div ng-include="'./pages/charts.html'"></div>
-			</fieldset-toggler>
-
 		
+			<fieldset-toggler titre='Chart view' >
+				<div class="fieldsetToggler" ng-include="'./pages/charts.html'"></div>
+			</fieldset-toggler>
 		<!--
 		<fieldset class="col col-xs-12">
-			<legend> Charts view </legend>
+			<legend ng-click="isHiddenCV = !isHiddenCV;"> <i class="fa fa-toggle-right" ng-show="isHiddenCV"></i><i class="fa fa-toggle-down" ng-show="!isHiddenCV"></i> Charts view </legend>
 			<div class="fieldsetToggler" ng-include="'./pages/charts.html'"></div>
 		</fieldset>
-		-->
+	-->
 
-		<fieldset class="col col-xs-12">
-			<legend> Cards view </legend>
-			<div class="fieldsetToggler" ng-include="'./pages/listCurrencies.html'"></div>
+	
+		<fieldset  class="col col-xs-12">
+				<input type="button" value="Toggle First" ng-click="box1=!box1">
+			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Cards view </legend>
+			<div data-slide-toggle="box1" data-slide-toggle-duration="400" ng-include="'./pages/listCurrencies.html'"></div>
 		</fieldset>
 
 		<fieldset class="col col-xs-12">
-			<legend> Help </legend>
+			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Help </legend>
 			<div class="fieldsetToggler" ng-include="'./pages/help.html'"></div>
 		</fieldset>
 
 		<fieldset class="col col-xs-12">
-			<legend> Infos </legend>
+			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Infos </legend>
 			<div class="fieldsetToggler" ng-include="'./pages/infos.html'"></div>
 		</fieldset>
 
