@@ -14,15 +14,23 @@
 		<div ng-include="'./pages/headerInvest.html'"></div>
 		<div ng-include="'./pages/headerQuickView.html'"></div>
 
+		<!--
 		<fieldset class="col col-xs-12">
 			<legend ng-click="isHidden = !isHidden;"> <span class="glyphicon" ng-class="isHidden ? 'glyphicon-chevron-down' : 'glyphicon-chevron-up'"></span> Pinned view </legend>
 			<div class="fieldsetToggler" ng-include="'./pages/pinned.html'"></div>
 		</fieldset>
+		-->
+			<fieldset-toggler titre='TOTO' >
+				<div ng-include="'./pages/charts.html'"></div>
+			</fieldset-toggler>
 
+		
+		<!--
 		<fieldset class="col col-xs-12">
 			<legend> Charts view </legend>
 			<div class="fieldsetToggler" ng-include="'./pages/charts.html'"></div>
 		</fieldset>
+		-->
 
 		<fieldset class="col col-xs-12">
 			<legend> Cards view </legend>
