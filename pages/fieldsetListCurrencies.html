@@ -14,7 +14,13 @@
 			
 			<div class="col-xs-7 divPadding verticalHR" >
 					
-					<div class="symbolName">
+					<bloc-infos 
+						data1="{{ currencie.symbol | uppercase}}"
+						data2="{{ currencie.name }}"
+						price1="{{ currencie.price_btc | limitTo:12 }}"
+						price2="{{ currencie.price_usd}}" />
+
+					<!--<div class="symbolName">
 						<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
 						target="_blank" 
 						title="coinmarketcap : {{ currencie.symbol | uppercase}}">
@@ -28,7 +34,7 @@
 						<br/>
 						<span class="fontSmall" ng-show="currencie.price_usd<0.001">({{ currencie.price_usd | setDecimal:6 }} $) </span>
 						<span class="fontSmall" ng-show="currencie.price_usd>0.001">({{ currencie.price_usd | setDecimal:2 }} $) </span>
-					</div>						
+					</div>		-->				
 			</div>
 									
 			<div class="col-xs-2">

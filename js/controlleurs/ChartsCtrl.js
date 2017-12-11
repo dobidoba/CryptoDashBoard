@@ -41,11 +41,11 @@ function ChartsCtrl(CurrenciesService,$scope) {
 			$scope.options = {
 				title: {
 					display: true,
-					text: 'My investment distribution (%)'
+					text: 'My investment distribution'
 				},
 				legend: {
 					display: true,
-					position: 'left',
+					position: 'bottom',
 					labels: {
 						fontColor: 'black'
 					}
@@ -60,7 +60,7 @@ function ChartsCtrl(CurrenciesService,$scope) {
 					if (myCrypto.balance>0){
 						
 						pourcent=myCrypto.valueBtc/$scope.totalBtcValue*100;
-						$scope.labels[i] = myCrypto.name;
+						$scope.labels[i] = myCrypto.name + " " + pourcent.toFixedDown(2) + "%";
 						$scope.data[i] = pourcent.toFixedDown(2);
 						i=i+1;
 					}

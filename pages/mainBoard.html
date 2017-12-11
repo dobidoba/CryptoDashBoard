@@ -21,34 +21,53 @@
 		</fieldset>
 		-->
 		
-			<fieldset-toggler titre='Chart view' >
-				<div class="fieldsetToggler" ng-include="'./pages/charts.html'"></div>
-			</fieldset-toggler>
-		<!--
 		<fieldset class="col col-xs-12">
-			<legend ng-click="isHiddenCV = !isHiddenCV;"> <i class="fa fa-toggle-right" ng-show="isHiddenCV"></i><i class="fa fa-toggle-down" ng-show="!isHiddenCV"></i> Charts view </legend>
-			<div class="fieldsetToggler" ng-include="'./pages/charts.html'"></div>
-		</fieldset>
-	-->
-
-	
-		<fieldset  class="col col-xs-12">
-				<input type="button" value="Toggle First" ng-click="box1=!box1">
-			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Cards view </legend>
-			<div data-slide-toggle="box1" data-slide-toggle-duration="400" ng-include="'./pages/listCurrencies.html'"></div>
+			<legend> 
+				<button type="button" 
+					ng-click="fieldset1=!fieldset1"
+					class="">
+					<i class="fa fa-toggle-right" ng-show="fieldset1"></i><i class="fa fa-toggle-down" ng-show="!fieldset1"></i>
+				</button>
+				Charts view 
+			</legend>
+			<div data-slide-toggle="fieldset1" ng-include="'./pages/fieldsetCharts.html'"></div>
 		</fieldset>
 
 		<fieldset class="col col-xs-12">
-			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Help </legend>
-			<div class="fieldsetToggler" ng-include="'./pages/help.html'"></div>
+			<legend> 
+				<button type="button" 
+					ng-click="fieldset2=!fieldset2"
+					class="">
+					<i class="fa fa-toggle-right" ng-show="fieldset2"></i><i class="fa fa-toggle-down" ng-show="!fieldset2"></i>
+				</button>
+				Cards view 
+			</legend>
+			<div data-slide-toggle="fieldset2" ng-include="'./pages/fieldsetListCurrencies.html'"></div>
 		</fieldset>
 
 		<fieldset class="col col-xs-12">
-			<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> Infos </legend>
-			<div class="fieldsetToggler" ng-include="'./pages/infos.html'"></div>
+			<legend> 
+				<button type="button" 
+					ng-click="fieldset3=!fieldset3"
+					class="">
+					<i class="fa fa-toggle-right" ng-show="fieldset3"></i><i class="fa fa-toggle-down" ng-show="!fieldset3"></i>
+				</button>
+				Help 
+			</legend>
+			<div data-slide-toggle="fieldset3" ng-include="'./pages/fieldsetHelp.html'"></div>
 		</fieldset>
 
-		
+		<fieldset class="col col-xs-12">
+			<legend> 
+				<button type="button" 
+					ng-click="fieldset4=!fieldset4"
+					class="">
+					<i class="fa fa-toggle-right" ng-show="fieldset4"></i><i class="fa fa-toggle-down" ng-show="!fieldset4"></i>
+				</button>
+				Infos 
+			</legend>
+			<div data-slide-toggle="fieldset4" ng-include="'./pages/fieldsetInfos.html'"></div>
+		</fieldset>
 
 	</div>
 </div>	

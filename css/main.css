@@ -143,9 +143,22 @@ h4{
 	height: 220px;
 }
 
-.blocGraph{
-	width: 600px; 
-	height: 220px;	
+/*medium+ screen sizes*/
+@media (min-width:651px) {
+	.blocGraph{
+		width: 600px; 
+		/*overflow-y: scroll;*/
+		height: 440px;	
+	}	
+}
+ 
+/*small screen sizes*/
+@media (max-width: 650px) {
+	.blocGraph{
+		width: 300px; 
+		/*overflow-y: scroll;*/
+		height: 220px;	
+	}	
 }
 
 .blocSmall{
@@ -165,10 +178,6 @@ h4{
 
 /********************************************** quickview ***********************************************/
 
-#quickView{
-	
-}
-
 #quickViewScroll{
 	overflow-y: scroll; 
 	width: 300px;
@@ -178,8 +187,8 @@ h4{
 
 /********************************************** fieldset ***********************************************/
 
-#mainBoard fieldset{
-	
+legend{
+	border-bottom: none;
 }
 
 
@@ -242,18 +251,6 @@ h4{
 #navBarBtn ul li a{
 	margin-top: 0px;
 }
-
-
-/********************************************** chart ***********************************************/
-
-#charts{
-	padding: 5px 5px 5px 5px;
-}
-.chart{
-	padding: 8px;
-}
-
-
 
 /********************************************** bootstrap ***********************************************/
 

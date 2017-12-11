@@ -1,28 +1,14 @@
-app.directive("fieldsetToggler", function(){
+app.directive('blocInfos', function(){
   return {
-      restrict: 'E',
-      replace: true,
-      transclude: true,
-      scope: {
-        titre: '@titre',
-        page: '@page'
-
-      },
-      template: '<fieldset  id="#legend" class="col col-xs-12">' +
-      '<legend ng-click="isHidden = !isHidden;"> <i class="fa fa-toggle-right" ng-show="isHidden"></i><i class="fa fa-toggle-down" ng-show="!isHidden"></i> {{titre}} </legend>'+
-      '<div class="fieldsetToggler" ng-transclude></div>'+
-      '</fieldset>',
-      controller: function($scope, $log){        
-        $("#legend").click(function(){
-          incr();
-        });
-        function incr(){
-          console.log('clic');
-          alert('toto');
-          
-        }
-      }
-  };
+    restrict: 'E',
+    scope : {
+      data1: '@data1',
+      data2: '@data2',
+      price1: '@price1',
+      price2: '@price2'
+    },
+    templateUrl: 'pages/templates/blocInfos.html'
+  }
 });
 
 app.directive('slideToggle', function() {  
@@ -32,7 +18,6 @@ app.directive('slideToggle', function() {
       isOpen: "=slideToggle"
     },  
     link: function(scope, element, attr) {
-      console.log('boum');
       var slideDuration = parseInt(attr.slideToggleDuration, 10) || 200;      
       scope.$watch('isOpen', function(newVal,oldVal){
         if(newVal !== oldVal){ 
