@@ -5,7 +5,10 @@ app.directive('blocInfos', function(){
       data1: '@data1',
       data2: '@data2',
       price1: '@price1',
-      price2: '@price2'
+      price2: '@price2',
+      percent1: '@percent1',
+      percent2: '@percent2',
+      percent3: '@percent3'
     },
     templateUrl: 'pages/templates/blocInfos.html'
   }

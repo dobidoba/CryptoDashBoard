@@ -1,17 +1,22 @@
 
-<div class="symbolName">
+<div class="symbolName color1">
   <a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
   target="_blank" 
   title="coinmarketcap : {{ titre1 | uppercase}}">
-    {{ data1 }} 
-    ({{ data2 }})
+    {{ data1 }} {{ data2 }}
   </a>
 </div>
 
 <div>
   {{ price1 }} <i class="fa fa-btc"></i>
   <br/>
-  <span class="fontSmall" ng-show="price2<0.001">({{ price2 | setDecimal:6 }} $) </span>
-  <span class="fontSmall" ng-show="price2>0.001">({{ price2 | setDecimal:2 }} $) </span>
-</div>		
+  <span class="fontSmall color2" ng-show="price2<0.001">({{ price2 | setDecimal:6 }} $) </span>
+  <span class="fontSmall color2" ng-show="price2>0.001">({{ price2 | setDecimal:2 }} $) </span>
+</div>
+
+<div>
+    <span class="xfontSmall" ng-style="{ 'color': percent1 < 0 ? 'red' : 'green' }">{{ percent1 }} %</span>	
+    /<span class="xfontSmall" ng-style="{ 'color': percent2 < 0 ? 'red' : 'green' }">{{ percent2 }} %</span>
+    /<span class="xfontSmall" ng-style="{ 'color': percent3 < 0 ? 'red' : 'green' }">{{ percent3 }} %</span>
+</div>
 

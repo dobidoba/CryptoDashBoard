@@ -48,24 +48,7 @@ h4{
 	margin-left: -5px;
 }
 
-.detail{
-	font-size: small;
-}
-
-.fontSmall{
-	font-size: small;
-	color: #428bca;
-}
-.smallFont{
-	font-size: x-small;
-	display: block;
-    margin: 0;
-    padding: 0;
-	width: 40px;
-}
-
 .symbolName{
-	color: #428bca;
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -113,6 +96,48 @@ h4{
    padding: 0px !important;
    margin: 0px !important;
 }
+
+
+/********************************************** font ***********************************************/
+
+
+.detail{
+	font-size: small;
+}
+
+.xfontSmall{
+	font-size: x-small;
+}
+
+.fontSmall{
+	font-size: small;
+}
+
+/********************************************** color ***********************************************/
+
+a{
+	color: #57A29A !important;
+}
+
+.color1{
+	color: #57A29A !important;
+}
+
+.color2{
+	color: #ABA782 !important;
+}
+
+
+/********************************************** fieldsetInfos ***********************************************/
+
+.labelInfo{
+	font-size: x-small;
+	display: block;
+    margin: 0;
+    padding: 0;
+	width: 40px;
+}
+
 
 
 /********************************************** headerBloc ***********************************************/
@@ -196,9 +221,6 @@ legend{
 
 .favorite{
 	background-color: #B1D1EE !important;
-}
-.favorite:hover{
-	
 }
 
 /********************************************** currencies ***********************************************/

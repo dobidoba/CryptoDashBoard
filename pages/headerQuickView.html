@@ -3,7 +3,7 @@
 		
 		<div class="row">
 
-			<div class="col-xs-12 symbolName columnCenter">QuickView</div>
+			<div class="col-xs-12 symbolName color1 columnCenter">QuickView</div>
 
 			<div class="col-xs-12 columnCenter">
 					<div class="col-xs-3" style="white-space: nowrap;">
@@ -24,6 +24,8 @@
 						<div class="col-xs-12 hrMargin"><hr/></div>
 						
 						<div class="row columnCenter">
+								
+
 								<div class="col-xs-3" style="white-space: nowrap;">
 									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
 										target="_blank" 
@@ -33,12 +35,15 @@
 									{{ currencie.symbol }}
 								</div>
 								<div class="col-xs-6">
-										{{ currencie.price_btc | limitTo:12 }}
-										<br/>
-										(<span ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }">{{ currencie.percent_change_24h }} %</span>	
-										/<span ng-style="{ 'color': currencie.percent_change_7dh < 0 ? 'red' : 'green' }">{{ currencie.percent_change_7d }} %</span>)
+									<bloc-infos 
+										data1="{{ currencie.balance }}"
+										data2="{{ currencie.symbol }} "
+										price1="{{ currencie.valueBtc | setDecimal:5 }}"
+										price2="{{ currencie.valueDollars }}" 
+										percent1="{{ currencie.percent_change_1h }}"
+										percent2="{{ currencie.percent_change_24h }}"
+										percent3="{{ currencie.percent_change_7d }}" />		
 								</div>
-								<div class="col-xs-3">{{ currencie.valueBtc | setDecimal:5 }}</div>
 						</div>
 				</div>
 			</div>
