@@ -33,7 +33,6 @@ h4{
 .verticalHR{
 	margin: -6px 0px -5px 0px;
 	border-right: 1px solid #ddd;
-	height: 80px;
 }
 
 .columnNumero{
@@ -165,7 +164,6 @@ a{
 
 .blocCurrencie{
 	width: 300px; 
-	height: 220px;
 }
 
 /*medium+ screen sizes*/
@@ -364,12 +362,12 @@ input[type="file"] {
 }
 
 /********************************************** alertes ***********************************************/
-.red{
-	background-color: #FFF2F2  !important;
+.alert_red{
+	background-color: rgb(243, 134, 134)  !important;
 }
-.green{
-	background-color: #EAFFEF  !important;
+.alert_green{
+	background-color: rgb(123, 243, 149)  !important;
 }
-.white{
+.alert_white{
 	background-color: white !important;
 }
