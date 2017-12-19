@@ -1,0 +1,61 @@
+
+<div class="row" >
+
+        <div class="col-xs-5" >price</div>
+        <div class="col-xs-7" >{{ currencie.price_btc | limitTo:12 }} <i class="fa fa-btc  fa"></i></div>
+
+        <div class="col-xs-5" >price</div>
+        <div class="col-xs-7" ng-show="{{ currencie.price_usd<0.001 }}">{{ currencie.price_usd | setDecimal:6 }} $</div>
+        <div class="col-xs-7" ng-show="{{ currencie.price_usd>0.001 }}">{{ currencie.price_usd | setDecimal:2 }} $</div>    
+        
+
+        <div class="col-xs-5" >MCap</div>
+        <div class="col-xs-7" >{{ currencie.market_cap_usd | number:3 }} $</div>
+
+        <div class="col-xs-5" >1h / 24h / 7d</div>
+        <div class="col-xs-7" >
+                <span class="xfontSmall" ng-style="{ 'color': currencie.percent_change_1h < 0 ? 'red' : 'green' }" ng-show="currencie.percent_change_1h!=null">{{ currencie.percent_change_1h }} %</span>	
+                <span class="xfontSmall" ng-show="currencie.percent_change_24h!=null">/</span>
+                <span class="xfontSmall" ng-style="{ 'color': currencie.percent_change_24h < 0 ? 'red' : 'green' }" ng-show="currencie.percent_change_24h!=null">{{ currencie.percent_change_24h }} %</span>
+                <span class="xfontSmall" ng-show="currencie.percent_change_7d!=null">/</span>
+                <span class="xfontSmall" ng-style="{ 'color': currencie.percent_change_7d < 0 ? 'red' : 'green' }" ng-show="currencie.percent_change_7d!=null">{{ currencie.percent_change_7d }} %</span>
+        </div>
+
+        <div class="col-xs-5" ></div>
+        <div class="col-xs-7" ></div>
+
+</div>
+
+<!--
+<coin-infos 
+percent1="{{ currencie.percent_change_1h }}"
+percent2="{{ currencie.percent_change_24h }}"
+percent3="{{ currencie.percent_change_7d }}"
+data1="{{ currencie.balance }} {{ currencie.symbol }}"
+price1="{{ currencie.valueBtc | setDecimal:5 }}"
+price2="{{ currencie.valueDollars }}" />
+
+
+<div class="color1">
+    {{ data1 }} 
+</div>
+
+<div>
+  {{ price1 }} <i class="fa fa-btc"></i>
+  <br/>
+  <span class="fontSmall color2" ng-show="price2<0.001">({{ price2 | setDecimal:6 }} $) </span>
+  <span class="fontSmall color2" ng-show="price2>0.001">({{ price2 | setDecimal:2 }} $) </span>
+</div>
+
+<div class="color1">
+    {{ data2 }}
+</div>
+
+<div>
+    <span class="xfontSmall" ng-style="{ 'color': percent1 < 0 ? 'red' : 'green' }" ng-show="percent1!=null">{{ percent1 }} %</span>	
+    <span class="xfontSmall" ng-show="percent2!=null">/</span>
+    <span class="xfontSmall" ng-style="{ 'color': percent2 < 0 ? 'red' : 'green' }" ng-show="percent2!=null">{{ percent2 }} %</span>
+    <span class="xfontSmall" ng-show="percent3!=null">/</span>
+    <span class="xfontSmall" ng-style="{ 'color': percent3 < 0 ? 'red' : 'green' }" ng-show="percent3!=null">{{ percent3 }} %</span>
+</div>
+-->

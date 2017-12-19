@@ -1,16 +1,8 @@
-app.directive('blocInfos', function(){
+app.directive('coinInfos', function(){
   return {
     restrict: 'E',
-    scope : {
-      data1: '@data1',
-      data2: '@data2',
-      price1: '@price1',
-      price2: '@price2',
-      percent1: '@percent1',
-      percent2: '@percent2',
-      percent3: '@percent3'
-    },
-    templateUrl: 'pages/templates/blocInfos.html'
+    scope : false,
+    templateUrl: 'pages/templates/coinInfos.html'
   }
 });
 
