@@ -7,10 +7,10 @@
 						</div>
 					</div>
 
-					<div class="row">
-						
-						<div class="col-xs-12"><hr/></div>
+					<div class="col-xs-12"><hr/></div>
 
+					<div class="row">
+					
 						<div class="col-xs-12 xsCenter">
 						
 							  <ui-select ng-model="currentCrypto.selected" theme="select2" ng-disabled="disabled" style="min-width: 250px;">
@@ -33,7 +33,18 @@
 						</div>	
 						
 					</div>
-				
+					
+					<div class="col-xs-12"><hr/></div>
+
+					<div class="row">
+						<div class="col-xs-12 columnCenter">
+							<button class="btn btn-default navbar-btn" ng-class="optionPrice?'backColor1':'backColor2'" ng-click="optionPrice=!optionPrice" type="button"><i class="fa fa-usd  fa"></i></button>
+							<button class="btn btn-default navbar-btn" ng-class="optionLabels?'backColor1':'backColor2'" ng-click="changeOptionLabels()" type="button"><i class="fa fa-bars  fa"></i></button>
+						</div>
+					</div>
+
+					<div class="col-xs-12"><hr/></div>
+
 					<div class="row">
 						<div class="col-xs-12 columnCenter">
 							<br/>

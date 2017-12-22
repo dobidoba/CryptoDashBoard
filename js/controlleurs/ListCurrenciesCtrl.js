@@ -12,7 +12,6 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
   $scope.sortReverse  = true;  				// set the default sort order
   $scope.searchCurrencie   = '';     		// set the default search/filter term  
   $scope.windowWidth = $window.innerWidth;
-   
 
   $scope.$watch(function () { return CurrenciesService.getTotalBtcValue(); }, function (newValue, oldValue) {
         if (newValue !== oldValue) {
@@ -33,10 +32,22 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
   $scope.addMoreItems = function(){
      $scope.infiniteScroll.currentItems += $scope.infiniteScroll.numToAdd;
   };
-	
+
+// ##############################################################################
+/* ##### OPTIONS */
+
+	 
+	$scope.optionLabels=true;
+
+	$scope.changeOptionLabels = function () {
+		$scope.optionLabels=!$scope.optionLabels;
+	}
+
 // ##############################################################################
 /* ##### FONCTIONS */
-  
+	
+	
+
   // ## showDetail
 	$scope.showDetail = function (myCryptoSymbol) {
 		if ($scope.activeDetail != myCryptoSymbol) {

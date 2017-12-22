@@ -1,7 +1,7 @@
 app.directive('coinInfos', function(){
   return {
     restrict: 'E',
-    scope : false,
+    scope : true,
     templateUrl: 'pages/templates/coinInfos.html'
   }
 });

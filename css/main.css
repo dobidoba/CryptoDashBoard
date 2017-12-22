@@ -6,7 +6,7 @@ a:active {text-decoration: none;}
 hr{
 	height: 1px;
 	border-top: 1px solid #ddd;
-	margin: 5px 0px 5px 0px;
+	margin: 5px -22px 5px -22px;
 }
 
 h1{
@@ -16,10 +16,6 @@ h4{
 	font-size: 14px;
 	font-weight: bold;
 	padding: 2px 2px 2px 0px;
-}
-
-. hr{
-	margin: 5px -19px 5px -19px;
 }
 
 .logo{
@@ -125,7 +121,13 @@ a{
 .color2{
 	color: #ABA782 !important;
 }
+.backColor1{
+	background-color: #57A29A !important;
+}
 
+.backColor2{
+	background-color: #ABA782 !important;
+}
 
 /********************************************** fieldsetInfos ***********************************************/
 
