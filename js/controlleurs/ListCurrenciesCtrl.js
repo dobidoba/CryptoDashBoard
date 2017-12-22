@@ -36,13 +36,22 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
 // ##############################################################################
 /* ##### OPTIONS */
 
-	 
+	
+	$scope.optionDetails=2;
 	$scope.optionLabels=true;
+	$scope.optionOtherDevise=true;
+
+	$scope.changeOptionDetails = function(num){
+		$scope.optionDetails=num;
+	}
 
 	$scope.changeOptionLabels = function () {
 		$scope.optionLabels=!$scope.optionLabels;
 	}
 
+	$scope.changeOptionOtherDevise = function(){
+		$scope.optionOtherDevise = !$scope.optionOtherDevise;
+	}
 // ##############################################################################
 /* ##### FONCTIONS */
 	
