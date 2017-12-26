@@ -48,15 +48,116 @@
 						</div>
 					</div>
 
+
+					<div class="row">
+							<div class="col-xs-6 columnCenter">
+								<A 
+									HREF="https://t.me/joinchat/G97heRBNiI_GIPMLh8RvFg" 
+									target="_blank"
+									class="btn btn-default navbar-btn btnActionCurrencie">
+										<i class="fa fa-telegram"></i>
+								</A>
+							</div>		
+							<div class="col-xs-6 columnCenter">
+								<!--
+								<button 
+									type="button" 
+									data-toggle="modal" 
+									data-target="#modalJson" 
+									ng-click="showCurrenciesFavorites()"
+									class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-eye  fa"></i>
+								</button> -->
+								
+								<a href = "{{downloadCurrenciesFavorites()}}" id = "saveCurrenciesFavorites" download="currencies.json" class="btn btn-default navbar-btn btnActionCurrencie"><i class="fa fa-save fa"></i></a>
+								
+								<label for="file-upload" class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-cloud-upload"></i>
+								</label>
+								<input id="file-upload" type="file" name="file" onchange="angular.element(this).scope().LoadFileData(this.files)" accept=".json" />
+							</div>
+					</div>
+
+					<div class="col-xs-12"><hr/></div>
+
+					<div class="row">	
+						<div class="col-xs-12 columnCenter">
+							<a href="#goto#fieldsetHelp">First connection - How to ?</a>
+						</div>
+					</div>
+
 					<div class="col-xs-12"><hr/></div>
 
 					<div class="row">
-						<div class="col-xs-12 columnCenter">
-							<br/>
-							</div>		
-						<div class="col-xs-12 columnCenter">
-							<a href="#goto#fieldsetHelp">How to ?</a>
+						<div class="col-xs-12">
+								<i class="fa fa-btc fa"></i>
+								<span class="labelInfo">Donate</span> <span id="copyTarget" class="labelInfo">1LGS4YWatsdHrvLFAheqPds1DTM7kysrie</span>
+								<button id="copyButton" class="btn btn-default navbar-btn btnActionCurrencie"><i class="fa fa-copy fa"></i></button> 
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+								<i class="fa fa-copyright fa"></i>
+								<span class="labelInfo">www.crypto-dashboard.com - Version 0.2 - 2018 - Dobidoba</span>
+								
+						</div>
+					</div>
+	
 			</div>
 	
+			<script>
+					document.getElementById("copyButton").addEventListener("click", function() {
+						copyToClipboard(document.getElementById("copyTarget"));
+					});
+		
+					function copyToClipboard(elem) {
+						  // create hidden text element, if it doesn't already exist
+						var targetId = "_hiddenCopyText_";
+						var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+						var origSelectionStart, origSelectionEnd;
+						if (isInput) {
+							// can just use the original source element for the selection and copy
+							target = elem;
+							origSelectionStart = elem.selectionStart;
+							origSelectionEnd = elem.selectionEnd;
+						} else {
+							// must use a temporary form element for the selection and copy
+							target = document.getElementById(targetId);
+							if (!target) {
+								var target = document.createElement("textarea");
+								target.style.position = "absolute";
+								target.style.left = "-9999px";
+								target.style.top = "0";
+								target.id = targetId;
+								document.body.appendChild(target);
+							}
+							target.textContent = elem.textContent;
+						}
+						// select the content
+						var currentFocus = document.activeElement;
+						target.focus();
+						target.setSelectionRange(0, target.value.length);
+						
+						// copy the selection
+						var succeed;
+						try {
+							  succeed = document.execCommand("copy");
+						} catch(e) {
+							succeed = false;
+						}
+						// restore original focus
+						if (currentFocus && typeof currentFocus.focus === "function") {
+							currentFocus.focus();
+						}
+						
+						if (isInput) {
+							// restore prior selection
+							elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+						} else {
+							// clear temporary content
+							target.textContent = "";
+						}
+						return succeed;
+					}
+			</script>
