@@ -1,3 +1,11 @@
+app.directive('coinHeader', function(){
+  return {
+    restrict: 'E',
+    scope : true,
+    templateUrl: 'pages/templates/coinHeader.html'
+  }
+});
+
 app.directive('coinInfos', function(){
   return {
     restrict: 'E',

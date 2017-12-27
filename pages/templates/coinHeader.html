@@ -1,0 +1,17 @@
+<div class="row" >
+        <div class="col-xs-6">
+                <a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+                target="_blank" 
+                title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+                        <img ng-src="{{ currencie.png }}"  title="{{ currencie.name }}"> 
+                </a>
+        </div>
+
+        <div class="col-xs-6 symbolName color1">
+                <a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+                target="_blank" 
+                title="coinmarketcap : {{ titre1 | uppercase}}">
+                {{ currencie.symbol | uppercase}} ({{ currencie.name }})
+                </a>
+        </div>
+</div>

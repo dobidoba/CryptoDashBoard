@@ -4,22 +4,7 @@
 	<div 	class="blocCurrencie blocLook hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 			
 			<div class="col-xs-3 logo" >
-				<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
-											target="_blank" 
-											title="coinmarketcap : {{ currencie.symbol | uppercase}}">
-					<img ng-src="{{ currencie.png }}"  title="{{ currencie.name }}"> 
-				</a>
-			</div>
-			
-			<div class="col-xs-5 divPadding" >
-					
-					<div class="symbolName color1">
-							<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
-							target="_blank" 
-							title="coinmarketcap : {{ titre1 | uppercase}}">
-							{{ currencie.symbol | uppercase}} ({{ currencie.name }})
-						</a>
-					</div>		
+					<coin-header currencie="{{currencie}}" />		
 
 					<coin-infos currencie="{{currencie}}" />
 			
