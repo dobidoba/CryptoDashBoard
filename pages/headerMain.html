@@ -36,30 +36,28 @@
 					
 					<div class="col-xs-12"><hr/></div>
 
-					<div class="row">
+					<div class="row fontSmall" ng-show="optionLabels">
+						<div class="col-xs-2 columnCenter">
+							Labels
+						</div>
 						<div class="col-xs-6 columnCenter">
 							Display détail
-						</div>		
+						</div>	
+						<div class="col-xs-4 columnCenter">
+							Save / Load
+						</div>			
+					</div>
+					<div class="row">
+						<div class="col-xs-2 columnCenter">
+							<button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionLabels?'backColor1':'backColor2'" ng-click="changeOptionLabels()" type="button"><i class="fa fa-file-text-o  fa"></i></button>
+						</div>
 						<div class="col-xs-6 columnCenter">
 							<button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==1?'backColor1':'backColor2'" ng-click="changeOptionDetails(1)" type="button"><i class="fa fa-square-o  fa"></i></button>
 							<button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==2?'backColor1':'backColor2'" ng-click="changeOptionDetails(2)" type="button"><i class="fa fa-columns  fa"></i></button>
 							<button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==3?'backColor1':'backColor2'" ng-click="changeOptionDetails(3)" type="button"><i class="fa fa-table  fa"></i></button>
-							<button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionLabels?'backColor1':'backColor2'" ng-click="changeOptionLabels()" type="button"><i class="fa fa-file-text-o  fa"></i></button>
 						</div>
-					</div>
-
-
-					<div class="row">
-							<div class="col-xs-6 columnCenter">
-								<A 
-									HREF="https://t.me/joinchat/G97heRBNiI_GIPMLh8RvFg" 
-									target="_blank"
-									class="btn btn-default navbar-btn btnActionCurrencie">
-										<i class="fa fa-telegram"></i>
-								</A>
-							</div>		
-							<div class="col-xs-6 columnCenter">
-								<!--
+						<div class="col-xs-4 columnCenter">
+							<!--
 								<button 
 									type="button" 
 									data-toggle="modal" 
@@ -75,15 +73,38 @@
 									<i class="fa fa-cloud-upload"></i>
 								</label>
 								<input id="file-upload" type="file" name="file" onchange="angular.element(this).scope().LoadFileData(this.files)" accept=".json" />
-							</div>
+						</div>
 					</div>
 
 					<div class="col-xs-12"><hr/></div>
 
-					<div class="row">	
-						<div class="col-xs-12 columnCenter">
-							<a href="#goto#fieldsetHelp">First connection - How to ?</a>
+					<div class="row fontSmall" ng-show="optionLabels">
+						<div class="col-xs-8 columnCenter">
+							
 						</div>
+						<div class="col-xs-4 columnCenter">
+							Help Chat
+						</div>	
+					</div>
+
+					<div class="row">			
+						<div class="col-xs-8 columnCenter">
+								
+						</div>				
+						<div class="col-xs-4 columnCenter">
+							<a 
+								href="#goto#fieldsetHelp"
+								class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-question"></i>
+							</a>
+					
+							<a 
+								HREF="https://t.me/joinchat/G97heRBNiI_GIPMLh8RvFg" 
+								target="_blank"
+								class="btn btn-default navbar-btn btnActionCurrencie">
+									<i class="fa fa-telegram"></i>
+							</a>
+						</div>						
 					</div>
 
 					<div class="col-xs-12"><hr/></div>

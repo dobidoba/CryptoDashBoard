@@ -2,6 +2,10 @@ a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:active {text-decoration: none;}
 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
 
 hr{
 	height: 1px;
@@ -110,10 +114,6 @@ h4{
 
 /********************************************** color ***********************************************/
 
-a{
-	color: #57A29A !important;
-}
-
 .color1{
 	color: #57A29A !important;
 }
@@ -127,6 +127,13 @@ a{
 
 .backColor2{
 	background-color: #ABA782 !important;
+}
+.borderColor1{
+	border-color: #57A29A;
+}
+
+.borderColor2{
+	border-color: #ABA782 !important;
 }
 
 /********************************************** fieldsetInfos ***********************************************/
