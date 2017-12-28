@@ -1,25 +1,10 @@
 <div id="mainBoard"  ng-controller="ListCurrenciesCtrl">
 	
-	<script type="text/javascript">
-		$(function(){
-			$('legend').click(function(){
-				$(this).parent().find('.fieldsetToggler').slideToggle("400");
-			});
-		});
-	</script>
-
 	<div class="divCenter row">
 	
 		<div ng-include="'./pages/headerMain.html'"></div>
 		<div ng-include="'./pages/headerInvest.html'"></div>
 		<div ng-include="'./pages/headerQuickView.html'"></div>
-
-		<!--
-		<fieldset class="col col-xs-12">
-			<legend ng-click="isHidden = !isHidden;"> <span class="glyphicon" ng-class="isHidden ? 'glyphicon-chevron-down' : 'glyphicon-chevron-up'"></span> Pinned view </legend>
-			<div class="fieldsetToggler" ng-include="'./pages/pinned.html'"></div>
-		</fieldset>
-		-->
 		
 		<fieldset class="col col-xs-12">
 			<legend> 
@@ -30,7 +15,7 @@
 				</button>
 				Charts view 
 			</legend>
-			<div data-slide-toggle="fieldset1" ng-include="'./pages/fieldsetCharts.html'"></div>
+			<div data-slide-toggle="fieldset1" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetCharts.html'"></div>
 		</fieldset>
 
 		<fieldset class="col col-xs-12">
@@ -42,7 +27,7 @@
 				</button>
 				Cards view 
 			</legend>
-			<div data-slide-toggle="fieldset2" ng-include="'./pages/fieldsetListCurrencies.html'"></div>
+			<div data-slide-toggle="fieldset2" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetListCurrencies.html'"></div>
 		</fieldset>
 
 		<fieldset id="fieldsetHelp" class="col col-xs-12">
@@ -54,7 +39,7 @@
 				</button>
 				Help 
 			</legend>
-			<div data-slide-toggle="fieldset3" ng-include="'./pages/fieldsetHelp.html'"></div>
+			<div data-slide-toggle="fieldset3" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetHelp.html'"></div>
 		</fieldset>
 
 	</div>

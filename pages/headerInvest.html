@@ -1,84 +1,43 @@
 	
 	<div id="cow" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 
-			<div class="blocSmall blocLook">
+			
+
+			<div class="blocCurrencie blocLook">
+				
+				<div class="row">
+					<div class="col-xs-4">
+						<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png"/>
+					</div>
+					<div class="col-xs-8 columnRight">
+						<h3>{{ btcPrice | setDecimal:2 }} $</h3>
+					</div>
+				</div>
+		
+			</div>
+			
+			<div class="blocCurrencie blocLook">
 				
 					<div class="row">
-						<div class="col-xs-4">
-							<div id="containerIntro">
-									<i class="fa fa-credit-card fa-2x"></i>
-							</div>
+						<div class="col-xs-12 symbolName color1 columnCenter">
+							My investment
 						</div>
-						<div class="col-xs-8">
-							<div class="symbolName color1">
-									My investment
-								</div>
-								<div class="huge">{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i></div>
-								<span class="fontSmall">({{ (totalBtcValue*btcPrice) | number:3 }} <i class="fa fa-usd fa"></i>)</span>
-								<div class="col-xs-2 columnLeft">Invested</div>
-								<div class="col-xs-2 text-right" >{{getNbInvested()}}</div>
-								<div class="col-xs-2 columnLeft">Watched</div>
-								<div class="col-xs-2 text-right">{{getNbWatched()}}</div>
+						
+						<div class="col-xs-12 columnRight">
+							<h3>{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i></h3>
+							<span class="fontSmall">{{ (totalBtcValue*btcPrice) | number:3 }} $</span>
+						</div>
+						<div class="col-xs-12">
+							<div class="row">
+							<div class="col-xs-6" ></div>
+							<div class="col-xs-6 columnRight">{{getNbInvested()}} invested</div>
+							<div class="col-xs-6"></div>
+							<div class="col-xs-6 columnRight">{{getNbWatched()}} watched</div>
+							</div>
 						</div>
 					</div>
 				
 			</div>
 
-			<div class="blocSmall blocLook">
-				
-					<div class="row">
-						<div class="col-xs-4">
-							<div id="containerIntro">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'BTC').id }}/" 
-									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'BTC').symbol | uppercase}}">
-										<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png"/>
-									</a>
-							</div>
-						</div>
-						<div class="col-xs-8">
-							<div class="symbolName color1">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'BTC').id }}/" 
-									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'BTC').symbol | uppercase}}">
-										{{ getCurrencie(currencies,'BTC').symbol }} 
-										({{ getCurrencie(currencies,'BTC').name }})
-									</a>
-								</div>
-								<div class="huge">{{ btcPrice | setDecimal:2 }} <i class="fa fa-usd fa"></i></div>
-								<div ng-style="{ 'color': getCurrencie(currencies,'BTC').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'BTC').percent_change_24h }} %</div>	
-						</div>
-					</div>
-				
-			</div>
-			
-			<div class="blocSmall blocLook">
-				
-					<div class="row">
-						<div class="col-xs-4">
-							<div id="containerIntro">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'ESP').id }}/" 
-									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'ESP').symbol | uppercase}}">
-										<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/espers.png"/>
-									</a>
-							</div>
-						</div>
-						<div class="col-xs-8">
-							<div class="symbolName color1">
-									<a 	href="https://coinmarketcap.com/currencies/{{ getCurrencie(currencies,'ESP').id }}/" 
-									target="_blank" 
-									title="coinmarketcap : {{ getCurrencie(currencies,'ESP').symbol | uppercase}}">
-										{{ getCurrencie(currencies,'ESP').symbol }} 
-										({{ getCurrencie(currencies,'ESP').name }})
-									</a>
-							</div>
-							Coin of the week
-							<div >{{ getCurrencie(currencies,'ESP').price_btc | limitTo:12 }} <i class="fa fa-btc fa"></i></div>
-							<div ng-style="{ 'color': getCurrencie(currencies,'ESP').percent_change_24h < 0 ? 'red' : 'green' }">{{ getCurrencie(currencies,'ESP').percent_change_24h }} %</div>	
-						</div>
-					</div>
-				
-			</div>
 	</div>			
 	
