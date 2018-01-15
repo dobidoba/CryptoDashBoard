@@ -42,7 +42,14 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
 	$scope.optionOtherDevise=true;
 
 	$scope.changeOptionDetails = function(num){
+
 		$scope.optionDetails=num;
+
+		if (num == 1){
+			$scope.optionLabels=false;
+		}else{
+			$scope.optionLabels=true;
+		}
 	}
 
 	$scope.changeOptionLabels = function () {

@@ -3,21 +3,8 @@
 	<div class="divCenter row">
 	
 		<div ng-include="'./pages/headerMain.html'"></div>
-		<div ng-include="'./pages/headerInvest.html'"></div>
 		<div ng-include="'./pages/headerQuickView.html'"></div>
 		
-		<fieldset class="col col-xs-12">
-			<legend> 
-				<button type="button" 
-					ng-click="fieldset1=!fieldset1"
-					class="">
-					<i class="fa fa-toggle-right" ng-show="fieldset1"></i><i class="fa fa-toggle-down" ng-show="!fieldset1"></i>
-				</button>
-				Charts view 
-			</legend>
-			<div data-slide-toggle="fieldset1" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetCharts.html'"></div>
-		</fieldset>
-
 		<fieldset class="col col-xs-12">
 			<legend> 
 				<button type="button" 
@@ -28,6 +15,18 @@
 				Cards view 
 			</legend>
 			<div data-slide-toggle="fieldset2" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetListCurrencies.html'"></div>
+		</fieldset>
+
+		<fieldset class="col col-xs-12">
+			<legend> 
+				<button type="button" 
+					ng-click="fieldset1=!fieldset1"
+					class="">
+					<i class="fa fa-toggle-right" ng-show="fieldset1"></i><i class="fa fa-toggle-down" ng-show="!fieldset1"></i>
+				</button>
+				Charts view 
+			</legend>
+			<div data-slide-toggle="fieldset1" data-slide-toggle-hide="true" ng-include="'./pages/fieldsetCharts.html'"></div>
 		</fieldset>
 
 		<fieldset id="fieldsetHelp" class="col col-xs-12">
