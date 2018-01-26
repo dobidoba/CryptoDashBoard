@@ -21,8 +21,10 @@ app.directive('slideToggle', function() {
       isOpen: "=slideToggle"
     },  
     link: function(scope, element, attr) {
-
-      if(attr.slideToggleHide){element.hide();}
+      
+      if(attr.slideToggleHide){
+        element.hide();
+      }
       
       scope.$watch('isOpen', function(newVal,oldVal){
         if(newVal !== oldVal){ 

@@ -1,6 +1,8 @@
 
 
-<div ng-controller="ChartsCtrl" class="blocGraph blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<div class="columnCenter marginTopBottom colorHelp" ng-show="currenciesFavorites.length==0">First use ? your charts will be displayed here !</div>
+
+<div ng-controller="ChartsCtrl" ng-show="currenciesFavorites.length!=0" class="blocGraph blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
     
     <div id="chart1" >
         <canvas 
