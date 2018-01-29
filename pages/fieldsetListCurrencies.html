@@ -5,46 +5,13 @@
 	
 	<div 	class="blocCurrencie blocLook hrMargin gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
 			
-			<div class="col-xs-3 logo" >
-					<coin-header currencie="{{currencie}}" />		
-
-					<coin-infos currencie="{{currencie}}" />
-			
-			</div>
-									
-			<div class="col-xs-4">
-				<div 
-					ng-class="(currencie.alertMin!=null && currencie.alertMin > currencie.price_btc)?'alert_red':(currencie.alertMax!=null && currencie.alertMax < currencie.price_btc)?'alert_green':'alert_white'"
-					class="btn btn-default navbar-btn btnActionCurrencie">
-						<i class="fa fa-bell-o" ng-show="(currencie.alertMin !=null) || (currencie.alertMax!=null)"></i>
-				</div>
-				
-					
-						<button 
-							type="button" 
-							data-toggle="modal" 
-							data-target="#myModal" 
-							ng-click="setSelectedCurrencie(currencie)"
-							class="btn btn-default navbar-btn btnActionCurrencie">
-							<i class="fa fa-plus-square-o fa"></i>
-						</button>
-					
-						<button 
-							type="button" 
-							data-toggle="modal" 
-							data-target="#myModalDelete" 
-							ng-click="setSelectedCurrencie(currencie)"
-							class="btn btn-default navbar-btn btnActionCurrencie">
-							<i class="fa fa-trash  fa"></i>
-						</button>
-					
-				
-				
+			<div class="col-xs-12 noPadding" >
+				<coin-header currencie="{{currencie}}" />		
 			</div>
 				
-			<div class="col-xs-12"><hr/></div>
+			<div class="col-xs-12" ng-show="optionDetails>1"><hr/></div>
 			
-			<div class="col-xs-12">
+			<div class="col-xs-12" ng-show="optionDetails>1">
 				<coin-infos currencie="{{currencie}}" />
 			</div>
 

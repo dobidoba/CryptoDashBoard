@@ -1,18 +1,19 @@
 <div class="row xfontSmall" ng-show="optionLabels">
-    <div class="col-xs-7 columnCenter">
+    <div class="col-xs-4 columnCenter">
         Display détail
     </div>	
-    <div class="col-xs-5 columnCenter">
+    <div class="col-xs-4 columnCenter">
         Save / Load
+    </div>
+    <div class="col-xs-4 columnCenter">
     </div>			
 </div>
 <div class="row">
-    <div class="col-xs-7 columnCenter">
+    <div class="col-xs-4 columnCenter">
         <button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==1?'backColor1':'backColor2'" ng-click="changeOptionDetails(1)" type="button"><i class="fa fa-square-o  fa"></i></button>
         <button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==2?'backColor1':'backColor2'" ng-click="changeOptionDetails(2)" type="button"><i class="fa fa-columns  fa"></i></button>
-        <button class="btn btn-default navbar-btn btnActionCurrencie" ng-class="optionDetails==3?'backColor1':'backColor2'" ng-click="changeOptionDetails(3)" type="button"><i class="fa fa-table  fa"></i></button>
     </div>
-    <div class="col-xs-5 columnCenter">
+    <div class="col-xs-4 columnCenter">
         <!--
             <button 
                 type="button" 
@@ -29,6 +30,8 @@
                 <i class="fa fa-cloud-upload"></i>
             </label>
             <input id="file-upload" type="file" name="file" onchange="angular.element(this).scope().LoadFileData(this.files)" accept=".json" />
+    </div>
+    <div class="col-xs-4 columnCenter">
     </div>
 </div>
 
