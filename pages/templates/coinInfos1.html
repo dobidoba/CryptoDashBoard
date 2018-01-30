@@ -1,0 +1,18 @@
+<div class="row" >
+
+        <div class="col-xs-5 fontSmall" ng-show="optionLabels">Price</div>
+        <div class="col-xs-7 fontSmall color1" ng-class="{col-xs-7: optionLabels, col-xs-12: !optionLabels}" >{{ currencie.price_btc | limitTo:12 }} <i class="fa fa-btc  fa"></i></div>
+
+        
+        <div class="col-xs-5" ng-show="optionLabels"></div>
+        <div class="col-xs-7 xfontSmall" ng-class="{col-xs-7: optionLabels, col-xs-12: !optionLabels}" ng-show="{{ currencie.price_usd<0.001 }}">({{ currencie.price_usd | setDecimal:6 }} <i class="fa fa-usd  fa">)</i></div>
+        <div class="col-xs-7 xfontSmall color2" ng-class="{col-xs-7: optionLabels, col-xs-12: !optionLabels}" ng-show="{{ currencie.price_usd>0.001 }}">({{ currencie.price_usd | setDecimal:2 }} <i class="fa fa-usd  fa">)</i></div>    
+
+        <div class="col-xs-5 fontSmall" ng-show="optionLabels">My invesment</div>
+        <div class="col-xs-7 fontSmall color1" ng-class="{col-xs-7: optionLabels, col-xs-12: !optionLabels}" >{{ currencie.valueBtc | setDecimal:5 }} <i class="fa fa-btc  fa"></i></div>
+
+        <div class="col-xs-5 xfontSmall" ng-show="optionLabels"></div>
+        <div class="col-xs-7 xfontSmall color2" ng-class="{col-xs-7: optionLabels, col-xs-12: !optionLabels}" >({{ currencie.valueDollars | setDecimal:2 }} <i class="fa fa-usd  fa"></i>)</div>
+
+</div>
+

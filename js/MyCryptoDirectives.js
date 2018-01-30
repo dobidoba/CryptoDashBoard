@@ -6,11 +6,18 @@ app.directive('coinHeader', function(){
   }
 });
 
-app.directive('coinInfos', function(){
+app.directive('coinInfos1', function(){
   return {
     restrict: 'E',
     scope : true,
-    templateUrl: 'pages/templates/coinInfos.html'
+    templateUrl: 'pages/templates/coinInfos1.html'
+  }
+});
+app.directive('coinInfos2', function(){
+  return {
+    restrict: 'E',
+    scope : true,
+    templateUrl: 'pages/templates/coinInfos2.html'
   }
 });
 
