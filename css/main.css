@@ -13,7 +13,6 @@ a:active {text-decoration: none;}
 hr{
 	height: 1px;
 	border-top: 1px solid #ddd;
-	margin: 5px -22px 5px -22px;
 }
 
 h1{
@@ -222,8 +221,7 @@ h4{
 
 #quickViewScroll{
 	overflow-y: scroll; 
-	width: 300px;
-	height: 172px;
+	height: 116px;
 }
 
 /********************************************** fieldset ***********************************************/
