@@ -211,9 +211,9 @@ app.service('CurrenciesService', function(StorageService) {
 	function evalCurrencieStatic($sce,myCrypto) {
 		
 		myCrypto.market_cap_usd=Number(myCrypto.market_cap_usd);
-		myCrypto.png=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/64x64/"+angular.lowercase(myCrypto.id)+".png");
-		myCrypto.png16=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/16x16/"+angular.lowercase(myCrypto.id)+".png");
-		myCrypto.png32=$sce.trustAsHtml("https://files.coinmarketcap.com/static/img/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png=$sce.trustAsHtml("/img/cryptocurrency-logos/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png16=$sce.trustAsHtml("/img/cryptocurrency-logos/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
+		myCrypto.png32=$sce.trustAsHtml("/img/cryptocurrency-logos/coins/32x32/"+angular.lowercase(myCrypto.id)+".png");
 		
 		return myCrypto;
 	}

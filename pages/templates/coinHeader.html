@@ -1,5 +1,5 @@
 
-        <div class="col-xs-3 logo">
+        <div class="col-xs-2 logo">
                 <a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
                 target="_blank" 
                 title="coinmarketcap : {{ currencie.symbol | uppercase}}">
@@ -8,15 +8,17 @@
                 </a>
         </div>
 
-        <div class="col-xs-6 smallPadding">
+        <div class="col-xs-7 smallPadding">
                 <a  href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
                 target="_blank" 
                 title="coinmarketcap : {{ titre1 | uppercase}}"
                 class="symbolName color1">
                 {{ currencie.symbol | uppercase}} 
                 </a>
-                <div class="color2" ng-show="optionDetails==2">({{ currencie.name }})</div>
-                <coin-infos1 currencie="{{currencie}}" />
+                <div class="color2">({{ currencie.name }})</div>
+                <div class="xfontSmall">
+                        <coin-infos1 currencie="{{currencie}}" />
+                </div>
         </div>
 
         <div class="col-xs-3 noPadding">

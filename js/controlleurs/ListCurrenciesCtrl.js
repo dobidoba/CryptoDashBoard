@@ -37,7 +37,7 @@ function ListCurrenciesCtrl(RequestService,CurrenciesService,$scope,$window,$htt
 /* ##### OPTIONS */
 
 	
-	$scope.optionDetails=2;
+	$scope.optionDetails=1;
 	$scope.optionLabels=true;
 	$scope.optionOtherDevise=true;
 

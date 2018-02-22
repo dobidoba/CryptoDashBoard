@@ -13,6 +13,7 @@ a:active {text-decoration: none;}
 hr{
 	height: 1px;
 	border-top: 1px solid #ddd;
+	margin: 3px 0px 3px 0px;
 }
 
 h1{
@@ -128,11 +129,11 @@ h4{
 /********************************************** color ***********************************************/
 
 .color1{
-	color: #57A29A !important;
+	color: #27827A !important;
 }
 
 .color2{
-	color: #ABA782 !important;
+	color: #8B8762 !important;
 }
 .colorHelp{
 	color: #000000 !important;

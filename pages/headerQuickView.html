@@ -1,69 +1,60 @@
 	
-<div id="quickView" class="blocCurrencie blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<div id="quickView" class="blocCurrencie blocLook gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 noPadding">
 		
 		<div class="row">
 
 			<div class="col-xs-12 symbolName color1 columnCenter">QuickView</div>
 
+			<div class="col-xs-12"><hr/></div>
+
 			<div class="col-xs-12">
 				
-					<div class="col-xs-12 hrMargin"><hr/></div>
+					
 
-					<div class="row">
-						<div class="col-xs-4">
-							<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png"/>
-						</div>
-						<div class="col-xs-8 columnRight">
-							<h3>{{ btcPrice | setDecimal:2 }} $</h3>
-						</div>
+					<div class="col-xs-4">
+						<img ng-src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png"/>
 					</div>
-			
-				
+					<div class="col-xs-8 columnRight">
+						<h3>{{ btcPrice | setDecimal:2 }} $</h3>
+					</div>				
 			</div>
 
+			<div class="col-xs-12"><hr/></div>
+
 			<div class="col-xs-12">
 				
-				<div class="col-xs-12 hrMargin"><hr/></div>
-
-				<div class="col-xs-6 symbolName color2 columnLeft">
-					My investment
+				<div class="col-xs-6 symbolName columnLeft">
+					<i class="fa fa-credit-card fa-2x"></i>
 				</div>
 				
 				<div class="col-xs-6 columnRight">
-					<h3>{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i></h3>
-					<span class="fontSmall">{{ (totalBtcValue*btcPrice) | number:3 }} $</span>
+					<h3 class="color1">{{ totalBtcValue | number:3 }} <i class="fa fa-btc fa"></i></h3>
+					<span class="fontSmall color2">({{ (totalBtcValue*btcPrice) | number:3 }} $)</span>
 				</div>
-				<div class="col-xs-12">
-					<div class="row">
-					<div class="col-xs-6" ></div>
-					<div class="col-xs-6 columnRight">{{getNbInvested()}} invested</div>
-					<div class="col-xs-6"></div>
-					<div class="col-xs-6 columnRight">{{getNbWatched()}} watched</div>
+				<div class="col-xs-12 columnRight">
+						{{getNbInvested()}} invested / {{getNbWatched()}} watched
 					</div>
 				</div>
 			</div>
 
-			<div id="quickViewScroll" class="col-xs-12">
+			<div id="quickViewScroll" class="col-xs-12 noPadding">
 
-				<div   ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']"> 
+				<div ng-repeat="currencie in currenciesFavorites | orderBy: ['-valueDollars','-market_cap_usd']" class="col-xs-12 noPadding"> 
 						
-						<div class="col-xs-12 hrMargin"><hr/></div>
+						<div class="col-xs-12 noPadding"><hr/></div>
 						
-						<div class="row">
-								
-
-								<div class="col-xs-12" style="white-space: nowrap;">
-									<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
-										target="_blank" 
-										title="coinmarketcap : {{ currencie.symbol | uppercase}}">
-										<img ng-src="{{ currencie.png16 }}"  title="{{ currencie.name }}"> 
-									</a>
-									{{ currencie.symbol }}
-								</div>
-								<div class="col-xs-12">
-										<coin-infos1 currencie="{{currencie}}" />
-								</div>
+						<div class="col-xs-3 color1 ">
+							<a 	href="https://coinmarketcap.com/currencies/{{ currencie.id }}/" 
+								target="_blank" 
+								title="coinmarketcap : {{ currencie.symbol | uppercase}}">
+								<img ng-src="{{ currencie.png16 }}"  title="{{ currencie.name }}"> 
+							</a>
+							{{ currencie.symbol }}
 						</div>
+						<div class="col-xs-9 noPadding">
+								<coin-infos1 currencie="{{currencie}}" />
+						</div>
+				
 				</div>
 			</div>
 			
